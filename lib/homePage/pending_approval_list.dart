@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import '../utils/app_constant.dart';
+
 class PendingApprovalList extends StatefulWidget {
   const PendingApprovalList({super.key});
 
@@ -329,51 +331,75 @@ body: SafeArea(
                                       child: Row(
                                         crossAxisAlignment: CrossAxisAlignment.center,
                                         children: [
-                                          Container(
-                                            // frame22xzK (126:3485)
-                                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 17*fem, 0*fem),
-                                            width: 161*fem,
-                                            height: double.infinity,
-                                            decoration: BoxDecoration (
-                                              border: Border.all(color: Color(0xff494949)),
-                                              borderRadius: BorderRadius.circular(6*fem),
+                                          InkWell(
+                                          onTap: () {
+                                            showDialog(
+                                              context: context,
+                                              builder: (BuildContext context) {
+                                                return RejectExpenseDialog();
+                                              },
+                                            );
+                                    },
+                                      child: Container(
+                                        margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 17 * fem, 0 * fem),
+                                        width: 161 * fem,
+                                        height: double.infinity,
+                                        decoration: BoxDecoration(
+                                          border: Border.all(color: Color.fromRGBO(73, 73, 73, 1)),
+                                          borderRadius: BorderRadius.circular(6 * fem),
+                                        ),
+                                        child: Center(
+                                          child: Text(
+                                            'Reject',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              fontFamily: 'Mate',
+                                              fontSize: 16 * ffem,
+                                              fontWeight: FontWeight.w400,
+                                              height: 1.7000000477 * ffem / fem,
+                                              color: Color(0xff000000),
                                             ),
-                                            child: Center(
-                                              child: Text(
-                                                'Reject',
-                                                textAlign: TextAlign.center,
-                                                style: TextStyle (
-                                                  fontFamily:'Mate',
-                                                  fontSize: 16*ffem,
-                                                  fontWeight: FontWeight.w400,
-                                                  height: 1.7000000477*ffem/fem,
-                                                  color: Color(0xff000000),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+
+                                          Container(
+                                            width: MediaQuery.of(context).size.width/2.8,
+                                            child: ElevatedButton(
+                                              style: ElevatedButton.styleFrom(
+                                                primary: Color(0xff494949), // Background color of the button
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius: BorderRadius.circular(6 * fem),
+                                                ),
+                                              ),
+                                              onPressed: () {
+                                                showDialog(
+                                                  context: context,
+                                                  builder: (BuildContext context) {
+                                                    return ApproveExpenseDialog();
+                                                  },
+                                                );                                            },
+                                              child: Container(
+                                                width: 150 * fem,
+                                                height: double.infinity,
+                                                child: Center(
+                                                  child: Text(
+                                                    'Approve',
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      fontFamily: 'Mate',
+                                                      fontSize: 16 * ffem,
+                                                      fontWeight: FontWeight.w400,
+                                                      height: 1.7000000477 * ffem / fem,
+                                                      color: Color(0xffffffff),
+                                                    ),
+                                                  ),
                                                 ),
                                               ),
                                             ),
                                           ),
-                                          Container(
-                                            // frame21qYK (126:3483)
-                                            width: 150*fem,
-                                            height: double.infinity,
-                                            decoration: BoxDecoration (
-                                              color: Color(0xff494949),
-                                              borderRadius: BorderRadius.circular(6*fem),
-                                            ),
-                                            child: Center(
-                                              child: Text(
-                                                'Approve',
-                                                textAlign: TextAlign.center,
-                                                style: TextStyle (
-                                                  fontFamily: 'Mate',
-                                                  fontSize: 16*ffem,
-                                                  fontWeight: FontWeight.w400,
-                                                  height: 1.7000000477*ffem/fem,
-                                                  color: Color(0xffffffff),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
+
                                         ],
                                       ),
                                     ),
@@ -619,54 +645,76 @@ body: SafeArea(
                                       ),
                                     ),
                                     Container(
-                                      // autogroupfbxrW7y (63jCmsfEJTaGBVJDa8FBxR)
+                                      // autogroupbv5tq91 (63jBbaHhcB6VexAgZxBv5T)
                                       width: double.infinity,
                                       height: 47*fem,
                                       child: Row(
                                         crossAxisAlignment: CrossAxisAlignment.center,
                                         children: [
-                                          Container(
-                                            // frame22qg3 (126:3530)
-                                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 17*fem, 0*fem),
-                                            width: 161*fem,
-                                            height: double.infinity,
-                                            decoration: BoxDecoration (
-                                              border: Border.all(color: Color(0xff494949)),
-                                              color: Color(0xfffbd124),
-                                              borderRadius: BorderRadius.circular(6*fem),
-                                            ),
-                                            child: Center(
-                                              child: Text(
-                                                'Reject',
-                                                textAlign: TextAlign.center,
-                                                style: TextStyle (
-                                                  fontFamily: 'Mate',
-                                                  fontSize: 16*ffem,
-                                                  fontWeight: FontWeight.w400,
-                                                  height: 1.7000000477*ffem/fem,
-                                                  color: Color(0xff000000),
+                                          InkWell(
+                                            onTap: () {
+                                              showDialog(
+                                                context: context,
+                                                builder: (BuildContext context) {
+                                                  return RejectExpenseDialog();
+                                                },
+                                              );
+                                            },
+                                            child: Container(
+                                              margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 17 * fem, 0 * fem),
+                                              width: 161 * fem,
+                                              height: double.infinity,
+                                              decoration: BoxDecoration(
+                                                border: Border.all(color: Color.fromRGBO(73, 73, 73, 1)),
+                                                borderRadius: BorderRadius.circular(6 * fem),
+                                              ),
+                                              child: Center(
+                                                child: Text(
+                                                  'Reject',
+                                                  textAlign: TextAlign.center,
+                                                  style: TextStyle(
+                                                    fontFamily: 'Mate',
+                                                    fontSize: 16 * ffem,
+                                                    fontWeight: FontWeight.w400,
+                                                    height: 1.7000000477 * ffem / fem,
+                                                    color: Color(0xff000000),
+                                                  ),
                                                 ),
                                               ),
                                             ),
                                           ),
+
                                           Container(
-                                            // frame2177m (126:3528)
-                                            width: 150*fem,
-                                            height: double.infinity,
-                                            decoration: BoxDecoration (
-                                              color: Color(0xff494949),
-                                              borderRadius: BorderRadius.circular(6*fem),
-                                            ),
-                                            child: Center(
-                                              child: Text(
-                                                'Approve',
-                                                textAlign: TextAlign.center,
-                                                style: TextStyle (
-                                                  fontFamily:'Mate',
-                                                  fontSize: 16*ffem,
-                                                  fontWeight: FontWeight.w400,
-                                                  height: 1.7000000477*ffem/fem,
-                                                  color: Color(0xffffffff),
+                                            width: MediaQuery.of(context).size.width/2.8,
+                                            child: ElevatedButton(
+                                              style: ElevatedButton.styleFrom(
+                                                primary: Color(0xff494949), // Background color of the button
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius: BorderRadius.circular(6 * fem),
+                                                ),
+                                              ),
+                                              onPressed: () {
+                                                showDialog(
+                                                  context: context,
+                                                  builder: (BuildContext context) {
+                                                    return ApproveExpenseDialog();
+                                                  },
+                                                );                                            },
+                                              child: Container(
+                                                width: 150 * fem,
+                                                height: double.infinity,
+                                                child: Center(
+                                                  child: Text(
+                                                    'Approve',
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      fontFamily: 'Mate',
+                                                      fontSize: 16 * ffem,
+                                                      fontWeight: FontWeight.w400,
+                                                      height: 1.7000000477 * ffem / fem,
+                                                      color: Color(0xffffffff),
+                                                    ),
+                                                  ),
                                                 ),
                                               ),
                                             ),
@@ -916,53 +964,76 @@ body: SafeArea(
                                       ),
                                     ),
                                     Container(
-                                      // autogroupdhlrzgf (63jDu6HZVmHmkkTBRAdhLR)
+                                      // autogroupbv5tq91 (63jBbaHhcB6VexAgZxBv5T)
                                       width: double.infinity,
                                       height: 47*fem,
                                       child: Row(
                                         crossAxisAlignment: CrossAxisAlignment.center,
                                         children: [
-                                          Container(
-                                            // frame22wro (126:3557)
-                                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 17*fem, 0*fem),
-                                            width: 161*fem,
-                                            height: double.infinity,
-                                            decoration: BoxDecoration (
-                                              border: Border.all(color: Color(0xff494949)),
-                                              borderRadius: BorderRadius.circular(6*fem),
-                                            ),
-                                            child: Center(
-                                              child: Text(
-                                                'Reject',
-                                                textAlign: TextAlign.center,
-                                                style: TextStyle (
-                                                  fontFamily: 'Mate',
-                                                  fontSize: 16*ffem,
-                                                  fontWeight: FontWeight.w400,
-                                                  height: 1.7000000477*ffem/fem,
-                                                  color: Color(0xff000000),
+                                          InkWell(
+                                            onTap: () {
+                                              showDialog(
+                                                context: context,
+                                                builder: (BuildContext context) {
+                                                  return RejectExpenseDialog();
+                                                },
+                                              );
+                                            },
+                                            child: Container(
+                                              margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 17 * fem, 0 * fem),
+                                              width: 161 * fem,
+                                              height: double.infinity,
+                                              decoration: BoxDecoration(
+                                                border: Border.all(color: Color.fromRGBO(73, 73, 73, 1)),
+                                                borderRadius: BorderRadius.circular(6 * fem),
+                                              ),
+                                              child: Center(
+                                                child: Text(
+                                                  'Reject',
+                                                  textAlign: TextAlign.center,
+                                                  style: TextStyle(
+                                                    fontFamily: 'Mate',
+                                                    fontSize: 16 * ffem,
+                                                    fontWeight: FontWeight.w400,
+                                                    height: 1.7000000477 * ffem / fem,
+                                                    color: Color(0xff000000),
+                                                  ),
                                                 ),
                                               ),
                                             ),
                                           ),
+
                                           Container(
-                                            // frame21qBV (126:3555)
-                                            width: 150*fem,
-                                            height: double.infinity,
-                                            decoration: BoxDecoration (
-                                              color: Color(0xff494949),
-                                              borderRadius: BorderRadius.circular(6*fem),
-                                            ),
-                                            child: Center(
-                                              child: Text(
-                                                'Approve',
-                                                textAlign: TextAlign.center,
-                                                style: TextStyle (
-                                                  fontFamily: 'Mate',
-                                                  fontSize: 16*ffem,
-                                                  fontWeight: FontWeight.w400,
-                                                  height: 1.7000000477*ffem/fem,
-                                                  color: Color(0xffffffff),
+                                            width: MediaQuery.of(context).size.width/2.8,
+                                            child: ElevatedButton(
+                                              style: ElevatedButton.styleFrom(
+                                                primary: Color(0xff494949), // Background color of the button
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius: BorderRadius.circular(6 * fem),
+                                                ),
+                                              ),
+                                              onPressed: () {
+                                                showDialog(
+                                                  context: context,
+                                                  builder: (BuildContext context) {
+                                                    return ApproveExpenseDialog();
+                                                  },
+                                                );                                            },
+                                              child: Container(
+                                                width: 150 * fem,
+                                                height: double.infinity,
+                                                child: Center(
+                                                  child: Text(
+                                                    'Approve',
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      fontFamily: 'Mate',
+                                                      fontSize: 16 * ffem,
+                                                      fontWeight: FontWeight.w400,
+                                                      height: 1.7000000477 * ffem / fem,
+                                                      color: Color(0xffffffff),
+                                                    ),
+                                                  ),
                                                 ),
                                               ),
                                             ),
