@@ -81,6 +81,7 @@ flutter:
     - assets/images/arrowbackiosnew-MyH.png
     - assets/images/group-1-nZd.png
     - assets/images/BMN_logo.png
+    - assets/images/BMNSplashLogo.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

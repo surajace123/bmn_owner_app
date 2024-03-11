@@ -18,33 +18,43 @@ class _ApprovedListState extends State<ApprovedList> {
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     return Scaffold(
-      // appBar: AppBar(
-      //   shadowColor: Color.fromRGBO(252, 209, 37, 1),
-      //   backgroundColor: Colors.white,
-      //   leading: Container(
-      //       margin: EdgeInsets.all(12),
-      //       child: Image.asset(Images.logo)),
-      //   title:   Text(
-      //     'BMN',
-      //     style: TextStyle(fontWeight: FontWeight.w500, fontSize: 26.57),
-      //   ),
-      //   // Row(
-      //   //   children: [
-      //   //     Container(
-      //   //       margin: EdgeInsets.all(14),
-      //   //       child: Image.asset(Images.logo),
-      //   //     ),
-      //   //     Text(
-      //   //       'BMN',
-      //   //       style: TextStyle(fontWeight: FontWeight.w500, fontSize: 26.57),
-      //   //     ),
-      //   //   ],
-      //   // ),
-      //   actions: [
-      //     _buildDateTime(),
-      //   ],
-      //   elevation: 0.8,
-      // ),
+      appBar: AppBar(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Image.asset(
+              'assets/images/BMN_logo.png',
+              width: 108,
+              height: 26,
+            ),
+
+            // SizedBox(width: MediaQuery.of(context).size.width/3.7),
+            Container(
+              width: 121,
+              height: 24,
+              margin: EdgeInsets.fromLTRB(0 * fem, 10 * fem, 0 * fem, 2 * fem),
+              child: Text(
+                'Tue, 23th Jan 2024',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontFamily: 'Nunito',
+                  fontSize: 14 * ffem,
+                  fontWeight: FontWeight.w500,
+                  height: 1.7 * ffem / fem,
+                  color: Color(0xff282828),
+                ),
+              ),
+            ),
+          ],
+        ),
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(1.0),
+          child: Divider(
+            color: Color.fromRGBO(252, 209, 37, 1), // Set the color to yellow
+            thickness: 1, // Set the thickness of the line
+          ),
+        ),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -159,7 +169,7 @@ class _ApprovedListState extends State<ApprovedList> {
                                     left: 267*fem,
                                     top: 22*fem,
                                     child: Container(
-                                      width: 52*fem,
+                                      width: 62*fem,
                                       height: 50*fem,
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -171,7 +181,7 @@ class _ApprovedListState extends State<ApprovedList> {
                                               'Total Item',
                                               style: TextStyle (
                                                 fontFamily:'Mate',
-                                                fontSize: 10*ffem,
+                                                fontSize: 12*ffem,
                                                 fontWeight: FontWeight.w400,
                                                 height: 1.7000001272*ffem/fem,
                                                 color: Color(0xff282828),
@@ -208,10 +218,10 @@ class _ApprovedListState extends State<ApprovedList> {
                                             // totalamountEsR (233:1939)
                                             margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 1*fem),
                                             child: Text(
-                                              'Total  Amount',
+                                              'Total Amount',
                                               style: TextStyle (
                                                 fontFamily:'Mate',
-                                                fontSize: 10*ffem,
+                                                fontSize: 12*ffem,
                                                 fontWeight: FontWeight.w400,
                                                 height: 1.7000001272*ffem/fem,
                                                 color: Color(0xff282828),
@@ -239,7 +249,7 @@ class _ApprovedListState extends State<ApprovedList> {
                                     left: 24*fem,
                                     top: 22*fem,
                                     child: Container(
-                                      width: 89*fem,
+                                      width: 95*fem,
                                       // height: 50*fem,
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -253,7 +263,7 @@ class _ApprovedListState extends State<ApprovedList> {
                                               textAlign: TextAlign.center,
                                               style: TextStyle (
                                                 fontFamily: 'Mate',
-                                                fontSize: 11*ffem,
+                                                fontSize: 12*ffem,
                                                 fontWeight: FontWeight.w400,
                                                 height: 1.7000001272*ffem/fem,
                                                 color: Color(0xff282828),
@@ -288,7 +298,7 @@ class _ApprovedListState extends State<ApprovedList> {
                                     left: 154*fem,
                                     top: 108*fem,
                                     child: Container(
-                                      width: 84*fem,
+                                      width: 94*fem,
                                       height: 54*fem,
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -300,7 +310,7 @@ class _ApprovedListState extends State<ApprovedList> {
                                               'Total Expense',
                                               style: TextStyle (
                                                 fontFamily: 'Mate',
-                                                fontSize: 12*ffem,
+                                                fontSize: 14*ffem,
                                                 fontWeight: FontWeight.w400,
                                                 height: 1.7000000817*ffem/fem,
                                                 color: Color(0xff282828),
@@ -369,10 +379,10 @@ class _ApprovedListState extends State<ApprovedList> {
                                     top: 181*fem,
                                     child: InkWell(
                                       onTap: () {
-                                        // Navigator.push(
-                                        //   context,
-                                        //   MaterialPageRoute(builder: (context) => WaitingApprovalPage2()),
-                                        // );
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(builder: (context) => ApproveListDetailed()),
+                                        );
                                       },
                                       child: Container(
                                         // width: 59*fem,
@@ -492,7 +502,7 @@ class _ApprovedListState extends State<ApprovedList> {
                                     left: 267*fem,
                                     top: 22*fem,
                                     child: Container(
-                                      width: 52*fem,
+                                      width: 62*fem,
                                       height: 50*fem,
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -504,7 +514,7 @@ class _ApprovedListState extends State<ApprovedList> {
                                               'Total Item',
                                               style: TextStyle (
                                                 fontFamily:'Mate',
-                                                fontSize: 10*ffem,
+                                                fontSize: 12*ffem,
                                                 fontWeight: FontWeight.w400,
                                                 height: 1.7000001272*ffem/fem,
                                                 color: Color(0xff282828),
@@ -572,7 +582,7 @@ class _ApprovedListState extends State<ApprovedList> {
                                     left: 24*fem,
                                     top: 22*fem,
                                     child: Container(
-                                      width: 89*fem,
+                                      width: 95*fem,
                                       // height: 50*fem,
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -586,7 +596,7 @@ class _ApprovedListState extends State<ApprovedList> {
                                               textAlign: TextAlign.center,
                                               style: TextStyle (
                                                 fontFamily: 'Mate',
-                                                fontSize: 11*ffem,
+                                                fontSize: 12*ffem,
                                                 fontWeight: FontWeight.w400,
                                                 height: 1.7000001272*ffem/fem,
                                                 color: Color(0xff282828),
@@ -621,7 +631,7 @@ class _ApprovedListState extends State<ApprovedList> {
                                     left: 154*fem,
                                     top: 108*fem,
                                     child: Container(
-                                      width: 84*fem,
+                                      width: 94*fem,
                                       height: 54*fem,
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -633,7 +643,7 @@ class _ApprovedListState extends State<ApprovedList> {
                                               'Total Expense',
                                               style: TextStyle (
                                                 fontFamily: 'Mate',
-                                                fontSize: 12*ffem,
+                                                fontSize: 14*ffem,
                                                 fontWeight: FontWeight.w400,
                                                 height: 1.7000000817*ffem/fem,
                                                 color: Color(0xff282828),
@@ -668,7 +678,7 @@ class _ApprovedListState extends State<ApprovedList> {
                                         children: [
                                           Container(
                                             // date1yy (233:1949)
-                                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 2*fem),
+                                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
                                             child: Text(
                                               'Date',
                                               style: TextStyle (
@@ -702,10 +712,10 @@ class _ApprovedListState extends State<ApprovedList> {
                                     top: 181*fem,
                                     child: InkWell(
                                       onTap: () {
-                                        // Navigator.push(
-                                        //   context,
-                                        //   MaterialPageRoute(builder: (context) => WaitingApprovalPage2()),
-                                        // );
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(builder: (context) => ApproveListDetailed()),
+                                        );
                                       },
                                       child: Container(
                                         // width: 59*fem,
@@ -825,7 +835,7 @@ class _ApprovedListState extends State<ApprovedList> {
                                     left: 267*fem,
                                     top: 22*fem,
                                     child: Container(
-                                      width: 52*fem,
+                                      width: 62*fem,
                                       height: 50*fem,
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -837,7 +847,7 @@ class _ApprovedListState extends State<ApprovedList> {
                                               'Total Item',
                                               style: TextStyle (
                                                 fontFamily:'Mate',
-                                                fontSize: 10*ffem,
+                                                fontSize: 12*ffem,
                                                 fontWeight: FontWeight.w400,
                                                 height: 1.7000001272*ffem/fem,
                                                 color: Color(0xff282828),
@@ -905,7 +915,7 @@ class _ApprovedListState extends State<ApprovedList> {
                                     left: 24*fem,
                                     top: 22*fem,
                                     child: Container(
-                                      width: 89*fem,
+                                      width: 95*fem,
                                       // height: 50*fem,
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -919,7 +929,7 @@ class _ApprovedListState extends State<ApprovedList> {
                                               textAlign: TextAlign.center,
                                               style: TextStyle (
                                                 fontFamily: 'Mate',
-                                                fontSize: 11*ffem,
+                                                fontSize: 12*ffem,
                                                 fontWeight: FontWeight.w400,
                                                 height: 1.7000001272*ffem/fem,
                                                 color: Color(0xff282828),
@@ -954,7 +964,7 @@ class _ApprovedListState extends State<ApprovedList> {
                                     left: 154*fem,
                                     top: 108*fem,
                                     child: Container(
-                                      width: 84*fem,
+                                      width: 94*fem,
                                       height: 54*fem,
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -966,7 +976,7 @@ class _ApprovedListState extends State<ApprovedList> {
                                               'Total Expense',
                                               style: TextStyle (
                                                 fontFamily: 'Mate',
-                                                fontSize: 12*ffem,
+                                                fontSize: 14*ffem,
                                                 fontWeight: FontWeight.w400,
                                                 height: 1.7000000817*ffem/fem,
                                                 color: Color(0xff282828),
@@ -1036,10 +1046,10 @@ class _ApprovedListState extends State<ApprovedList> {
                                     child: InkWell(
                                       onTap: (){
 
-                                        // Navigator.push(
-                                        //   context,
-                                        //   MaterialPageRoute(builder: (context) => WaitingApprovalPage2()),
-                                        // );
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(builder: (context) => ApproveListDetailed()),
+                                        );
                                       },
                                       child: Container(
                                         // width: 59*fem,
@@ -1088,519 +1098,7 @@ class _ApprovedListState extends State<ApprovedList> {
                   ),
                 ),
               )
-              // Padding(
-              //   padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
-              //   child: Align(
-              //     alignment: Alignment.centerLeft,
-              //     child: Text(
-              //       "Approved List",
-              //       style: TextStyle(
-              //           fontSize: 20, fontWeight: FontWeight.w400),
-              //     ),
-              //   ),
-              // ),
-              // InkWell(
-              //   onTap: (){
-              //     Navigator.push(
-              //       context,
-              //       MaterialPageRoute(builder: (context) => ApproveListDetailed()),
-              //     );
-              //   },
-              //   child: Container(
-              //     margin: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
-              //
-              //     width: MediaQuery.of(context).size.width,
-              //     height: MediaQuery.of(context).size.height / 4.7,
-              //     decoration: BoxDecoration(
-              //       color: Color.fromRGBO(252, 209, 37, 1),
-              //
-              //       borderRadius: BorderRadius.all(
-              //           Radius.circular(20.0)), // Adjust radius as needed
-              //     ),
-              //     child: ClipPath(
-              //       // clipper: Clip1Clipper(),
-              //       child: Container(
-              //         // margin: EdgeInsets.all(15),
-              //           width: MediaQuery.of(context).size.width /
-              //               1, // Adjust width as needed
-              //           height: MediaQuery.of(context).size.height /
-              //               4.7, // Adjust height as needed
-              //           decoration: BoxDecoration(
-              //             color: Color.fromRGBO(252, 209, 37, 1),
-              //
-              //             borderRadius: BorderRadius.all(
-              //                 Radius.circular(20.0)), // Adjust radius as needed
-              //           ),
-              //           child: Column(
-              //             mainAxisAlignment: MainAxisAlignment.center,
-              //             children: [
-              //               Row(
-              //                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //                 children: [
-              //                   Column(
-              //                     mainAxisAlignment: MainAxisAlignment.start,
-              //                     children: [
-              //                       Text(
-              //                         "Opening Balance ",
-              //                         style: TextStyle(
-              //                           fontSize: 12,
-              //                           fontWeight: FontWeight.w400,
-              //                           color: Color.fromRGBO(40, 40, 40, 1),
-              //                         ),
-              //                       ),
-              //                       Text(
-              //                         "₹8,902 ",
-              //                         style: TextStyle(
-              //                             fontSize: 20, fontWeight: FontWeight.w500),
-              //                       ),
-              //                     ],
-              //                   ),
-              //                   Column(
-              //                     mainAxisAlignment: MainAxisAlignment.start,
-              //                     children: [
-              //                       Text(
-              //                         "Taken Amount",
-              //                         style: TextStyle(
-              //                           fontSize: 12,
-              //                           fontWeight: FontWeight.w400,
-              //                           color: Color.fromRGBO(40, 40, 40, 1),
-              //                         ),
-              //                       ),
-              //                       Text(
-              //                         "₹5,000 ",
-              //                         style: TextStyle(
-              //                             fontSize: 20, fontWeight: FontWeight.w500),
-              //                       ),
-              //                     ],
-              //                   ),
-              //                   Column(
-              //                     mainAxisAlignment: MainAxisAlignment.start,
-              //                     children: [
-              //                       Text(
-              //                         "Total Item",
-              //                         style: TextStyle(
-              //                           fontSize: 12,
-              //                           fontWeight: FontWeight.w400,
-              //                           color: Color.fromRGBO(40, 40, 40, 1),
-              //                         ),
-              //                       ),
-              //                       Text(
-              //                         "06",
-              //                         style: TextStyle(
-              //                             fontSize: 20, fontWeight: FontWeight.w500),
-              //                       ),
-              //                     ],
-              //                   ),
-              //                 ],
-              //               ),
-              //               SizedBox(
-              //                 height: 30,
-              //               ),
-              //               Row(
-              //                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //                 children: [
-              //                   Column(
-              //                     children: [
-              //                       Text(
-              //                         "Approved On ",
-              //                         style: TextStyle(
-              //                           fontSize: 12,
-              //                           color: Color.fromRGBO(40, 40, 40, 1),
-              //                         ),
-              //                       ),
-              //                       Text(
-              //                         "08/01/2024",
-              //                         style: TextStyle(
-              //                             fontSize: 20, fontWeight: FontWeight.w500),
-              //                       ),
-              //                     ],
-              //                   ),
-              //                   Column(
-              //                     children: [
-              //                       Text(
-              //                         "Total Expense",
-              //                         style: TextStyle(
-              //                           fontSize: 12,
-              //                           color: Color.fromRGBO(40, 40, 40, 1),
-              //                         ),
-              //                       ),
-              //                       Text(
-              //                         "₹25,000",
-              //                         style: TextStyle(
-              //                             fontSize: 20, fontWeight: FontWeight.w500),
-              //                       ),
-              //                     ],
-              //                   ),
-              //                   Column(
-              //                     children: [
-              //                       Text(
-              //                         "Date",
-              //                         style: TextStyle(
-              //                           fontSize: 12,
-              //                           color: Color.fromRGBO(40, 40, 40, 1),
-              //                         ),
-              //                       ),
-              //                       Text(
-              //                         "08/01/2024",
-              //                         style: TextStyle(
-              //                             fontSize: 20, fontWeight: FontWeight.w500),
-              //                       ),
-              //                     ],
-              //                   ),
-              //
-              //                 ],
-              //               ),
-              //               Padding(
-              //                 padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 8),
-              //                 child: Row(
-              //                   mainAxisAlignment: MainAxisAlignment.end,
-              //                   children: [
-              //                     Text(
-              //                       "Details ",
-              //                       style: TextStyle(
-              //                         fontSize: 12,
-              //                         color: Color.fromRGBO(40, 40, 40, 1),
-              //                       ),
-              //                     ),
-              //                     Icon(Icons.arrow_forward_ios,size: 16,),
-              //                   ],
-              //                 ),
-              //               ),
-              //             ],
-              //           )),
-              //     ),
-              //   ),
-              // ),
-              // Container(
-              //   margin: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
-              //
-              //
-              //   width: MediaQuery.of(context).size.width,
-              //   height: MediaQuery.of(context).size.height / 4.7,
-              //   decoration: BoxDecoration(
-              //     color: Color.fromRGBO(252, 209, 37, 1),
-              //
-              //     borderRadius: BorderRadius.all(
-              //         Radius.circular(20.0)), // Adjust radius as needed
-              //   ),
-              //   child: ClipPath(
-              //     // clipper: Clip1Clipper(),
-              //     child: Container(
-              //       // margin: EdgeInsets.all(15),
-              //         width: MediaQuery.of(context).size.width /
-              //             1, // Adjust width as needed
-              //         height: MediaQuery.of(context).size.height /
-              //             4.7, // Adjust height as needed
-              //         decoration: BoxDecoration(
-              //           color: Color.fromRGBO(252, 209, 37, 1),
-              //
-              //           borderRadius: BorderRadius.all(
-              //               Radius.circular(20.0)), // Adjust radius as needed
-              //         ),
-              //         child: Column(
-              //           mainAxisAlignment: MainAxisAlignment.center,
-              //           children: [
-              //             Row(
-              //               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //               children: [
-              //                 Column(
-              //                   mainAxisAlignment: MainAxisAlignment.start,
-              //                   children: [
-              //                     Text(
-              //                       "Opening Balance ",
-              //                       style: TextStyle(
-              //                         fontSize: 12,
-              //                         fontWeight: FontWeight.w400,
-              //                         color: Color.fromRGBO(40, 40, 40, 1),
-              //                       ),
-              //                     ),
-              //                     Text(
-              //                       "₹9,000",
-              //                       style: TextStyle(
-              //                           fontSize: 20, fontWeight: FontWeight.w500),
-              //                     ),
-              //                   ],
-              //                 ),
-              //                 Column(
-              //                   mainAxisAlignment: MainAxisAlignment.start,
-              //                   children: [
-              //                     Text(
-              //                       "Taken Amount",
-              //                       style: TextStyle(
-              //                         fontSize: 12,
-              //                         fontWeight: FontWeight.w400,
-              //                         color: Color.fromRGBO(40, 40, 40, 1),
-              //                       ),
-              //                     ),
-              //                     Text(
-              //                       "₹8,000 ",
-              //                       style: TextStyle(
-              //                           fontSize: 20, fontWeight: FontWeight.w500),
-              //                     ),
-              //                   ],
-              //                 ),
-              //                 Column(
-              //                   mainAxisAlignment: MainAxisAlignment.start,
-              //                   children: [
-              //                     Text(
-              //                       "Total Item",
-              //                       style: TextStyle(
-              //                         fontSize: 12,
-              //                         fontWeight: FontWeight.w400,
-              //                         color: Color.fromRGBO(40, 40, 40, 1),
-              //                       ),
-              //                     ),
-              //                     Text(
-              //                       "07",
-              //                       style: TextStyle(
-              //                           fontSize: 20, fontWeight: FontWeight.w500),
-              //                     ),
-              //                   ],
-              //                 ),
-              //               ],
-              //             ),
-              //             SizedBox(
-              //               height: 30,
-              //             ),
-              //             Row(
-              //               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //               children: [
-              //                 Column(
-              //                   children: [
-              //                     Text(
-              //                       "Approved On ",
-              //                       style: TextStyle(
-              //                         fontSize: 12,
-              //                         color: Color.fromRGBO(40, 40, 40, 1),
-              //                       ),
-              //                     ),
-              //                     Text(
-              //                       "08/01/2024",
-              //                       style: TextStyle(
-              //                           fontSize: 20, fontWeight: FontWeight.w500),
-              //                     ),
-              //                   ],
-              //                 ),
-              //                 Column(
-              //                   children: [
-              //                     Text(
-              //                       "Total Expense",
-              //                       style: TextStyle(
-              //                         fontSize: 12,
-              //                         color: Color.fromRGBO(40, 40, 40, 1),
-              //                       ),
-              //                     ),
-              //                     Text(
-              //                       "₹25,000",
-              //                       style: TextStyle(
-              //                           fontSize: 20, fontWeight: FontWeight.w500),
-              //                     ),
-              //                   ],
-              //                 ),
-              //                 Column(
-              //                   children: [
-              //                     Text(
-              //                       "Date",
-              //                       style: TextStyle(
-              //                         fontSize: 12,
-              //                         color: Color.fromRGBO(40, 40, 40, 1),
-              //                       ),
-              //                     ),
-              //                     Text(
-              //                       "07/01/2024",
-              //                       style: TextStyle(
-              //                           fontSize: 20, fontWeight: FontWeight.w500),
-              //                     ),
-              //                   ],
-              //                 ),
-              //
-              //               ],
-              //             ),
-              //             Padding(
-              //               padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 8),
-              //               child: Row(
-              //                 mainAxisAlignment: MainAxisAlignment.end,
-              //                 children: [
-              //                   Text(
-              //                     "Details ",
-              //                     style: TextStyle(
-              //                       fontSize: 12,
-              //                       color: Color.fromRGBO(40, 40, 40, 1),
-              //                     ),
-              //                   ),
-              //                   Icon(Icons.arrow_forward_ios,size: 16,),
-              //                 ],
-              //               ),
-              //             ),
-              //           ],
-              //         )),
-              //   ),
-              // ),
-              // Container(
-              //   margin: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
-              //
-              //
-              //   width: MediaQuery.of(context).size.width,
-              //   height: MediaQuery.of(context).size.height / 4.7,
-              //   decoration: BoxDecoration(
-              //     color: Color.fromRGBO(252, 209, 37, 1),
-              //
-              //     borderRadius: BorderRadius.all(
-              //         Radius.circular(20.0)), // Adjust radius as needed
-              //   ),
-              //   child: ClipPath(
-              //     // clipper: Clip1Clipper(),
-              //     child: Container(
-              //       // margin: EdgeInsets.all(15),
-              //         width: MediaQuery.of(context).size.width /
-              //             1, // Adjust width as needed
-              //         height: MediaQuery.of(context).size.height /
-              //             4.7, // Adjust height as needed
-              //         decoration: BoxDecoration(
-              //           color: Color.fromRGBO(252, 209, 37, 1),
-              //
-              //           borderRadius: BorderRadius.all(
-              //               Radius.circular(20.0)), // Adjust radius as needed
-              //         ),
-              //         child: Column(
-              //           mainAxisAlignment: MainAxisAlignment.center,
-              //           children: [
-              //             Row(
-              //               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //               children: [
-              //                 Column(
-              //                   mainAxisAlignment: MainAxisAlignment.start,
-              //                   children: [
-              //                     Text(
-              //                       "Opening Balance ",
-              //                       style: TextStyle(
-              //                         fontSize: 12,
-              //                         fontWeight: FontWeight.w400,
-              //                         color: Color.fromRGBO(40, 40, 40, 1),
-              //                       ),
-              //                     ),
-              //                     Text(
-              //                       "₹6,902",
-              //                       style: TextStyle(
-              //                           fontSize: 20, fontWeight: FontWeight.w500),
-              //                     ),
-              //                   ],
-              //                 ),
-              //                 Column(
-              //                   mainAxisAlignment: MainAxisAlignment.start,
-              //                   children: [
-              //                     Text(
-              //                       "Taken Amount",
-              //                       style: TextStyle(
-              //                         fontSize: 12,
-              //                         fontWeight: FontWeight.w400,
-              //                         color: Color.fromRGBO(40, 40, 40, 1),
-              //                       ),
-              //                     ),
-              //                     Text(
-              //                       "₹5,000 ",
-              //                       style: TextStyle(
-              //                           fontSize: 20, fontWeight: FontWeight.w500),
-              //                     ),
-              //                   ],
-              //                 ),
-              //                 Column(
-              //                   mainAxisAlignment: MainAxisAlignment.start,
-              //                   children: [
-              //                     Text(
-              //                       "Total Item",
-              //                       style: TextStyle(
-              //                         fontSize: 12,
-              //                         fontWeight: FontWeight.w400,
-              //                         color: Color.fromRGBO(40, 40, 40, 1),
-              //                       ),
-              //                     ),
-              //                     Text(
-              //                       "02",
-              //                       style: TextStyle(
-              //                           fontSize: 20, fontWeight: FontWeight.w500),
-              //                     ),
-              //                   ],
-              //                 ),
-              //               ],
-              //             ),
-              //             SizedBox(
-              //               height: 30,
-              //             ),
-              //             Row(
-              //               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //               children: [
-              //                 Column(
-              //                   children: [
-              //                     Text(
-              //                       "Approved On ",
-              //                       style: TextStyle(
-              //                         fontSize: 12,
-              //                         color: Color.fromRGBO(40, 40, 40, 1),
-              //                       ),
-              //                     ),
-              //                     Text(
-              //                       "08/01/2024",
-              //                       style: TextStyle(
-              //                           fontSize: 20, fontWeight: FontWeight.w500),
-              //                     ),
-              //                   ],
-              //                 ),
-              //                 Column(
-              //                   children: [
-              //                     Text(
-              //                       "Total Expense",
-              //                       style: TextStyle(
-              //                         fontSize: 12,
-              //                         color: Color.fromRGBO(40, 40, 40, 1),
-              //                       ),
-              //                     ),
-              //                     Text(
-              //                       "₹25,000",
-              //                       style: TextStyle(
-              //                           fontSize: 20, fontWeight: FontWeight.w500),
-              //                     ),
-              //                   ],
-              //                 ),
-              //                 Column(
-              //                   children: [
-              //                     Text(
-              //                       "Date",
-              //                       style: TextStyle(
-              //                         fontSize: 12,
-              //                         color: Color.fromRGBO(40, 40, 40, 1),
-              //                       ),
-              //                     ),
-              //                     Text(
-              //                       "06/01/2024",
-              //                       style: TextStyle(
-              //                           fontSize: 20, fontWeight: FontWeight.w500),
-              //                     ),
-              //                   ],
-              //                 ),
-              //
-              //               ],
-              //             ),
-              //             Padding(
-              //               padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 8),
-              //               child: Row(
-              //                 mainAxisAlignment: MainAxisAlignment.end,
-              //                 children: [
-              //                   Text(
-              //                     "Details ",
-              //                     style: TextStyle(
-              //                       fontSize: 12,
-              //                       color: Color.fromRGBO(40, 40, 40, 1),
-              //                     ),
-              //                   ),
-              //                   Icon(Icons.arrow_forward_ios,size: 16,),
-              //                 ],
-              //               ),
-              //             ),
-              //           ],
-              //         )),
-              //   ),
-              // ),
+
             ],
           ),
         ),

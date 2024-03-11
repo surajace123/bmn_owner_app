@@ -37,23 +37,44 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
 
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset('assets/images/diamond.png',height: 64.53,width: 60,),
-              SizedBox(width: 10,),
-              Center(
-                child: Text("BMN",style: TextStyle(fontFamily: 'Poppins',fontSize: 65.93,fontWeight: FontWeight.w500
-                ),),
-              ),
-            ],
+          Container(
+            // group3Zyh (89:4555)
+            margin: EdgeInsets.fromLTRB(80*fem, 0*fem, 0*fem, 50*fem),
+            width: double.infinity,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  // group1T3V (89:4557)
+                  margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 13.85*fem, 0*fem),
+                  width: 260.53*fem,
+                  height: 70*fem,
+                  child: Image.asset(
+                    'assets/images/BMNSplashLogo.png',
+                    width: 64.53*fem,
+                    height: 60*fem,
+                  ),
+                ),
+
+              ],
+            ),
           ),
-          Center(
-            child: Text("Owner Login",style: TextStyle(fontSize: 44.5,fontWeight: FontWeight.w500
-            ),),
+          Container(
+            // ownerloginfom (89:4566)
+
+            child: Text(
+              'Owner Login',
+              textAlign: TextAlign.center,
+              style: TextStyle (
+                fontFamily: 'Poppins',
+                fontSize: 42*ffem,
+                fontWeight: FontWeight.w500,
+                height: 0.7699999809*ffem/fem,
+                color: Color(0xff000000),
+              ),
+            ),
           ),
         ],
       )

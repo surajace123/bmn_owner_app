@@ -44,6 +44,43 @@ class _ApproveListDetailedState extends State<ApproveListDetailed> {
       //   ],
       //   elevation: 0.8,
       // ),
+      appBar: AppBar(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Image.asset(
+              'assets/images/BMN_logo.png',
+              width: 108,
+              height: 26,
+            ),
+
+            // SizedBox(width: MediaQuery.of(context).size.width/3.7),
+            Container(
+              width: 121,
+              height: 24,
+              margin: EdgeInsets.fromLTRB(0 * fem, 10 * fem, 0 * fem, 2 * fem),
+              child: Text(
+                'Tue, 23th Jan 2024',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontFamily: 'Nunito',
+                  fontSize: 14 * ffem,
+                  fontWeight: FontWeight.w500,
+                  height: 1.7 * ffem / fem,
+                  color: Color(0xff282828),
+                ),
+              ),
+            ),
+          ],
+        ),
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(1.0),
+          child: Divider(
+            color: Color.fromRGBO(252, 209, 37, 1), // Set the color to yellow
+            thickness: 1, // Set the thickness of the line
+          ),
+        ),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -105,9 +142,8 @@ class _ApproveListDetailedState extends State<ApproveListDetailed> {
                                                       width: double.infinity,
                                                       child: Text(
                                                         'Bill Date',
-                                                        textAlign: TextAlign.center,
                                                         style: TextStyle (
-                                                          fontFamily:          'Mate',
+                                                          fontFamily:'Mate',
                                                           fontSize: 14*ffem,
                                                           fontWeight: FontWeight.w400,
                                                           height: 1.7000000817*ffem/fem,
@@ -214,7 +250,6 @@ class _ApproveListDetailedState extends State<ApproveListDetailed> {
                                               ),
                                               Container(
                                                 // group110RzX (124:452)
-                                                width: double.infinity,
                                                 child: Column(
                                                   crossAxisAlignment: CrossAxisAlignment.start,
                                                   children: [
@@ -226,7 +261,7 @@ class _ApproveListDetailedState extends State<ApproveListDetailed> {
                                                         textAlign: TextAlign.center,
                                                         style: TextStyle (
                                                           fontFamily:  'Mate',
-                                                          fontSize: 13*ffem,
+                                                          fontSize: 13.90*ffem,
                                                           fontWeight: FontWeight.w400,
                                                           height: 1.7000000817*ffem/fem,
                                                           color: Color(0xff282828),
@@ -260,7 +295,7 @@ class _ApproveListDetailedState extends State<ApproveListDetailed> {
                                             children: [
                                               Container(
                                                 // group108Qzs (124:450)
-                                                margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 20*fem),
+                                                margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 16*fem),
                                                 width: 62*fem,
                                                 child: Column(
                                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -270,7 +305,6 @@ class _ApproveListDetailedState extends State<ApproveListDetailed> {
                                                       width: double.infinity,
                                                       child: Text(
                                                         'Bill',
-                                                        textAlign: TextAlign.center,
                                                         style: TextStyle (
                                                           fontFamily:  'Mate',
                                                           fontSize: 14*ffem,
@@ -338,7 +372,7 @@ class _ApproveListDetailedState extends State<ApproveListDetailed> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.only(right: 240),
+                                    padding: const EdgeInsets.only(right: 250),
                                     child: Container(
                                       // commentsAeb (125:455)
                                       width: double.infinity,
@@ -619,316 +653,7 @@ class _ApproveListDetailedState extends State<ApproveListDetailed> {
                   ),
                 ),
               )
-              // Container(
-              //   margin: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
-              //
-              //
-              //   width: MediaQuery.of(context).size.width,
-              //   height: MediaQuery.of(context).size.height / 4.2,
-              //   decoration: BoxDecoration(
-              //     color: Color.fromRGBO(252, 209, 37, 1),
-              //
-              //     borderRadius: BorderRadius.all(
-              //         Radius.circular(20.0)), // Adjust radius as needed
-              //   ),
-              //   child: ClipPath(
-              //     // clipper: Clip1Clipper(),
-              //     child: Container(
-              //       // margin: EdgeInsets.all(15),
-              //         width: MediaQuery.of(context).size.width /
-              //             1, // Adjust width as needed
-              //         height: MediaQuery.of(context).size.height /
-              //             4.7, // Adjust height as needed
-              //         decoration: BoxDecoration(
-              //           color: Color.fromRGBO(252, 209, 37, 1),
-              //
-              //           borderRadius: BorderRadius.all(
-              //               Radius.circular(20.0)), // Adjust radius as needed
-              //         ),
-              //         child: Column(
-              //           mainAxisAlignment: MainAxisAlignment.center,
-              //           children: [
-              //             Row(
-              //               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //               children: [
-              //                 Column(
-              //                   mainAxisAlignment: MainAxisAlignment.start,
-              //                   children: [
-              //                     Text(
-              //                       "Bill Date ",
-              //                       style: TextStyle(
-              //                         fontSize: 12,
-              //                         fontWeight: FontWeight.w400,
-              //                         color: Color.fromRGBO(40, 40, 40, 1),
-              //                       ),
-              //                     ),
-              //                     Text(
-              //                       "01/02/2024",
-              //                       style: TextStyle(
-              //                           fontSize: 20, fontWeight: FontWeight.w500),
-              //                     ),
-              //                   ],
-              //                 ),
-              //                 Column(
-              //                   mainAxisAlignment: MainAxisAlignment.start,
-              //                   children: [
-              //                     Text(
-              //                       "Category",
-              //                       style: TextStyle(
-              //                         fontSize: 12,
-              //                         fontWeight: FontWeight.w400,
-              //                         color: Color.fromRGBO(40, 40, 40, 1),
-              //                       ),
-              //                     ),
-              //                     Text(
-              //                       "Tea",
-              //                       style: TextStyle(
-              //                           fontSize: 20, fontWeight: FontWeight.w500),
-              //                     ),
-              //                   ],
-              //                 ),
-              //                 Column(
-              //                   mainAxisAlignment: MainAxisAlignment.start,
-              //                   children: [
-              //                     Text(
-              //                       "Bill",
-              //                       style: TextStyle(
-              //                         fontSize: 12,
-              //                         fontWeight: FontWeight.w400,
-              //                         color: Color.fromRGBO(40, 40, 40, 1),
-              //                       ),
-              //                     ),
-              //                     Text(
-              //                       "₹25,000",
-              //                       style: TextStyle(
-              //                           fontSize: 20, fontWeight: FontWeight.w500),
-              //                     ),
-              //                   ],
-              //                 ),
-              //               ],
-              //             ),
-              //             SizedBox(
-              //               height: 30,
-              //             ),
-              //             Row(
-              //               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //               children: [
-              //                 Column(
-              //                   children: [
-              //                     Text(
-              //                       "Amount",
-              //                       style: TextStyle(
-              //                         fontSize: 12,
-              //                         color: Color.fromRGBO(40, 40, 40, 1),
-              //                       ),
-              //                     ),
-              //                     Text(
-              //                       "₹3,902",
-              //                       style: TextStyle(
-              //                           fontSize: 20, fontWeight: FontWeight.w500),
-              //                     ),
-              //                   ],
-              //                 ),
-              //                 Column(
-              //                   children: [
-              //                     Text(
-              //                       "Approved On",
-              //                       style: TextStyle(
-              //                         fontSize: 12,
-              //                         color: Color.fromRGBO(40, 40, 40, 1),
-              //                       ),
-              //                     ),
-              //                     Text(
-              //                       "₹5,000",
-              //                       style: TextStyle(
-              //                           fontSize: 20, fontWeight: FontWeight.w500),
-              //                     ),
-              //                   ],
-              //                 ),
-              //                 Column(
-              //                   children: [
-              //                     Text(
-              //                       "Comments",
-              //                       style: TextStyle(
-              //                         fontSize: 12,
-              //                         color: Color.fromRGBO(40, 40, 40, 1),
-              //                       ),
-              //                     ),
-              //                     Text(
-              //                       "₹3,902",
-              //                       style: TextStyle(
-              //                           fontSize: 20, fontWeight: FontWeight.w500),
-              //                     ),
-              //                   ],
-              //                 ),
-              //
-              //               ],
-              //             ),
-              //             Padding(
-              //               padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 8),
-              //               child: Row(
-              //                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //                 children: [
-              //                   Column(
-              //                     children: [
-              //                       Padding(
-              //                         padding: const EdgeInsets.symmetric(horizontal: 10),
-              //                         child: Text(
-              //                           "Comments ",
-              //                           style: TextStyle(
-              //                             fontSize: 14,fontWeight: FontWeight.w400,
-              //                             color: Color.fromRGBO(40, 40, 40, 1),
-              //                           ),
-              //                         ),
-              //                       ),
-              //                       Padding(
-              //                         padding: const EdgeInsets.symmetric(horizontal: 16),
-              //                         child: Text(
-              //                           "Tea bought for Employs ",
-              //                           style: TextStyle(
-              //                             fontSize: 14,fontWeight: FontWeight.w500,
-              //                             color: Color.fromRGBO(40, 40, 40, 1),
-              //                           ),
-              //                         ),
-              //                       ),
-              //
-              //                     ],
-              //                   ),
-              //
-              //
-              //                 ],
-              //               ),
-              //             ),
-              //
-              //
-              //           ],
-              //         )),
-              //   ),
-              // ),
-              // Container(
-              //   margin: EdgeInsets.all(15),
-              //   decoration: BoxDecoration(
-              //     color: Color.fromRGBO(252, 209, 37, 1),
-              //     borderRadius: BorderRadius.circular(8.0),
-              //   ),
-              //   padding: EdgeInsets.all(16.0),
-              //   child: Row(
-              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //     children: [
-              //       Text(
-              //         "Total Expense",
-              //         style: TextStyle(
-              //           fontFamily: "Mate",
-              //           fontSize: 18,
-              //           fontWeight: FontWeight.w400,
-              //           color: Colors.black,
-              //         ),
-              //       ),
-              //       SizedBox(height: 8.0),
-              //       Text(
-              //         "₹3540",
-              //         style: TextStyle(
-              //           fontSize: 18,
-              //           fontWeight: FontWeight.w400,
-              //           color: Colors.black,
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
-              // Container(
-              //   margin: EdgeInsets.all(15),
-              //   decoration: BoxDecoration(
-              //     color: Color.fromRGBO(252, 209, 37, 1),
-              //     borderRadius: BorderRadius.circular(8.0),
-              //   ),
-              //   padding: EdgeInsets.all(16.0),
-              //   child: Row(
-              //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //     children: [
-              //       Text(
-              //         "Opening Balance  ",
-              //         style: TextStyle(
-              //           fontFamily: "Mate",
-              //           fontSize: 18,
-              //           fontWeight: FontWeight.w400,
-              //           color: Colors.black,
-              //         ),
-              //       ),
-              //       SizedBox(height: 8.0),
-              //       Text(
-              //         "₹3,214",
-              //         style: TextStyle(
-              //           fontSize: 18,
-              //           fontWeight: FontWeight.w400,
-              //           color: Colors.black,
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
-              // Container(
-              //   margin: EdgeInsets.all(15),
-              //   decoration: BoxDecoration(
-              //     color: Color.fromRGBO(252, 209, 37, 1),
-              //     borderRadius: BorderRadius.circular(8.0),
-              //   ),
-              //   padding: EdgeInsets.all(16.0),
-              //   child: Row(
-              //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //     children: [
-              //       Text(
-              //         "Amount Taken",
-              //         style: TextStyle(
-              //           fontFamily: "Mate",
-              //           fontSize: 18,
-              //           fontWeight: FontWeight.w400,
-              //           color: Colors.black,
-              //         ),
-              //       ),
-              //       SizedBox(height: 8.0),
-              //       Text(
-              //         "₹5,000",
-              //         style: TextStyle(
-              //           fontSize: 18,
-              //           fontWeight: FontWeight.w400,
-              //           color: Colors.black,
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
-              // Container(
-              //   margin: EdgeInsets.all(12),
-              //   decoration: BoxDecoration(
-              //     color: Color.fromRGBO(252, 209, 37, 1),
-              //     borderRadius: BorderRadius.circular(8.0),
-              //   ),
-              //   padding: EdgeInsets.all(16.0),
-              //   child: Row(
-              //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //     children: [
-              //       Text(
-              //         "Closing Balance",
-              //         style: TextStyle(
-              //           fontFamily: "Mate",
-              //           fontSize: 18,
-              //           fontWeight: FontWeight.w400,
-              //           color: Colors.black,
-              //         ),
-              //       ),
-              //       SizedBox(height: 8.0),
-              //       Text(
-              //         "₹4,674",
-              //         style: TextStyle(
-              //           fontSize: 18,
-              //           fontWeight: FontWeight.w400,
-              //           color: Colors.black,
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
+
           
             ],
           ),

@@ -36,6 +36,7 @@ class _MainPageScreenState extends State<MainPageScreen> {
      backgroundColor: Color.fromRGBO(255, 255, 255, 1),
       appBar: AppBar(
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Image.asset(
               'assets/images/BMN_logo.png',
@@ -43,7 +44,7 @@ class _MainPageScreenState extends State<MainPageScreen> {
               height: 26,
             ),
 
-            SizedBox(width: 130),
+            // SizedBox(width: MediaQuery.of(context).size.width/3.7),
             Container(
               width: 121,
               height: 24,
@@ -71,16 +72,16 @@ class _MainPageScreenState extends State<MainPageScreen> {
         ),
       ),
       body: pages[myCurrentIndex],
-      bottomNavigationBar:
-      BottomNavigation(
-        currentIndex: myCurrentIndex,
-        onTap: (index) {
-          setState(() {
-            myCurrentIndex = index;
-
-          });
-        },
-      ),
+      // bottomNavigationBar:
+      // BottomNavigation(
+      //   currentIndex: myCurrentIndex,
+      //   onTap: (index) {
+      //     setState(() {
+      //       myCurrentIndex = index;
+      //
+      //     });
+      //   },
+      // ),
 
 
     );

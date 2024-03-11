@@ -20,6 +20,7 @@ class _PendingApprovalListState extends State<PendingApprovalList> {
     return Scaffold(
       appBar: AppBar(
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Image.asset(
               'assets/images/BMN_logo.png',
@@ -27,7 +28,7 @@ class _PendingApprovalListState extends State<PendingApprovalList> {
               height: 26,
             ),
 
-            SizedBox(width: 70),
+            // SizedBox(width: MediaQuery.of(context).size.width/3.7),
             Container(
               width: 121,
               height: 24,

@@ -19,6 +19,43 @@ class _WaitingApprovalListState extends State<WaitingApprovalList> {
     double ffem = fem * 0.97;
     return Scaffold(
       backgroundColor: Color.fromRGBO(255, 2, 255, 1),
+      appBar: AppBar(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Image.asset(
+              'assets/images/BMN_logo.png',
+              width: 108,
+              height: 26,
+            ),
+
+            // SizedBox(width: MediaQuery.of(context).size.width/3.7),
+            Container(
+              width: 121,
+              height: 24,
+              margin: EdgeInsets.fromLTRB(0 * fem, 10 * fem, 0 * fem, 2 * fem),
+              child: Text(
+                'Tue, 23th Jan 2024',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontFamily: 'Nunito',
+                  fontSize: 14 * ffem,
+                  fontWeight: FontWeight.w500,
+                  height: 1.7 * ffem / fem,
+                  color: Color(0xff282828),
+                ),
+              ),
+            ),
+          ],
+        ),
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(1.0),
+          child: Divider(
+            color: Color.fromRGBO(252, 209, 37, 1), // Set the color to yellow
+            thickness: 1, // Set the thickness of the line
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
@@ -66,7 +103,7 @@ class _WaitingApprovalListState extends State<WaitingApprovalList> {
                             children: [
                               Container(
                                 // group77Gbq (126:2959)
-                                padding: EdgeInsets.fromLTRB(32*fem, 19*fem, 29*fem, 11*fem),
+                                padding: EdgeInsets.fromLTRB(30*fem, 19*fem, 25*fem, 11*fem),
                                 width: double.infinity,
                                 height: 160*fem,
                                 decoration: BoxDecoration (
@@ -79,7 +116,7 @@ class _WaitingApprovalListState extends State<WaitingApprovalList> {
                                     Container(
                                       // autogroupvbvdiij (63j4fh11Q4fjrxByFbvBvd)
                                       margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 33*fem, 3*fem),
-                                      width: 89*fem,
+                                      width: 95*fem,
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
@@ -88,7 +125,7 @@ class _WaitingApprovalListState extends State<WaitingApprovalList> {
                                             'Opening Balance',
                                             style: TextStyle (
                                               fontFamily:'Mate',
-                                              fontSize: 10*ffem,
+                                              fontSize: 12*ffem,
                                               fontWeight: FontWeight.w400,
                                               height: 1.7000001272*ffem/fem,
                                               color: Color(0xff282828),
@@ -310,8 +347,8 @@ class _WaitingApprovalListState extends State<WaitingApprovalList> {
                                                   Container(
                                                     // arrowbackiosnew7JF (126:2980)
                                                     margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 1*fem),
-                                                    width: 16*fem,
-                                                    height: 16*fem,
+                                                    width: 14*fem,
+                                                    height: 14*fem,
                                                     child: Image.asset(
                                                       'assets/images/arrowbackiosnew-ppw.png',
                                                       width: 16*fem,
@@ -333,7 +370,7 @@ class _WaitingApprovalListState extends State<WaitingApprovalList> {
                               ),
                               Container(
                                 // group78hnF (126:3068)
-                                padding: EdgeInsets.fromLTRB(32*fem, 19*fem, 29*fem, 11*fem),
+                                padding: EdgeInsets.fromLTRB(30*fem, 19*fem, 25*fem, 11*fem),
                                 width: double.infinity,
                                 height: 160*fem,
                                 decoration: BoxDecoration (
@@ -346,7 +383,7 @@ class _WaitingApprovalListState extends State<WaitingApprovalList> {
                                     Container(
                                       // autogroupdvrma5M (63j5nf8kjzYCeyWTL1dVrm)
                                       margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 33*fem, 3*fem),
-                                      width: 89*fem,
+                                      width: 95*fem,
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
@@ -355,7 +392,7 @@ class _WaitingApprovalListState extends State<WaitingApprovalList> {
                                             'Opening Balance',
                                             style: TextStyle (
                                               fontFamily:'Mate',
-                                              fontSize: 10*ffem,
+                                              fontSize: 12*ffem,
                                               fontWeight: FontWeight.w400,
                                               height: 1.7000001272*ffem/fem,
                                               color: Color(0xff282828),
@@ -599,7 +636,7 @@ class _WaitingApprovalListState extends State<WaitingApprovalList> {
                               ),
                               Container(
                                 // group79Akw (126:3093)
-                                padding: EdgeInsets.fromLTRB(32*fem, 19*fem, 29*fem, 11*fem),
+                                padding: EdgeInsets.fromLTRB(30*fem, 19*fem, 25*fem, 11*fem),
                                 width: double.infinity,
                                 height: 160*fem,
                                 decoration: BoxDecoration (
@@ -612,7 +649,7 @@ class _WaitingApprovalListState extends State<WaitingApprovalList> {
                                     Container(
                                       // autogroupbziyduR (63j6vi52mtQYAN7gQVbziy)
                                       margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 33*fem, 3*fem),
-                                      width: 89*fem,
+                                      width: 95*fem,
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
@@ -621,7 +658,7 @@ class _WaitingApprovalListState extends State<WaitingApprovalList> {
                                             'Opening Balance',
                                             style: TextStyle (
                                               fontFamily:'Mate',
-                                              fontSize: 10*ffem,
+                                              fontSize: 12*ffem,
                                               fontWeight: FontWeight.w400,
                                               height: 1.7000001272*ffem/fem,
                                               color: Color(0xff282828),
@@ -867,7 +904,7 @@ class _WaitingApprovalListState extends State<WaitingApprovalList> {
 
                               Container(
                                 // group79Akw (126:3093)
-                                padding: EdgeInsets.fromLTRB(32*fem, 19*fem, 29*fem, 11*fem),
+                                padding: EdgeInsets.fromLTRB(30*fem, 19*fem, 25*fem, 11*fem),
                                 width: double.infinity,
                                 height: 160*fem,
                                 decoration: BoxDecoration (
@@ -880,7 +917,7 @@ class _WaitingApprovalListState extends State<WaitingApprovalList> {
                                     Container(
                                       // autogroupbziyduR (63j6vi52mtQYAN7gQVbziy)
                                       margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 33*fem, 3*fem),
-                                      width: 89*fem,
+                                      width: 95*fem,
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
@@ -889,7 +926,7 @@ class _WaitingApprovalListState extends State<WaitingApprovalList> {
                                             'Opening Balance',
                                             style: TextStyle (
                                               fontFamily:'Mate',
-                                              fontSize: 10*ffem,
+                                              fontSize: 12*ffem,
                                               fontWeight: FontWeight.w400,
                                               height: 1.7000001272*ffem/fem,
                                               color: Color(0xff282828),
@@ -1134,7 +1171,7 @@ class _WaitingApprovalListState extends State<WaitingApprovalList> {
                               ),
                               Container(
                                 // group79Akw (126:3093)
-                                padding: EdgeInsets.fromLTRB(32*fem, 19*fem, 29*fem, 11*fem),
+                                padding: EdgeInsets.fromLTRB(30*fem, 19*fem, 25*fem, 11*fem),
                                 width: double.infinity,
                                 height: 160*fem,
                                 decoration: BoxDecoration (
@@ -1147,7 +1184,7 @@ class _WaitingApprovalListState extends State<WaitingApprovalList> {
                                     Container(
                                       // autogroupbziyduR (63j6vi52mtQYAN7gQVbziy)
                                       margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 33*fem, 3*fem),
-                                      width: 89*fem,
+                                      width: 95*fem,
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
@@ -1156,7 +1193,7 @@ class _WaitingApprovalListState extends State<WaitingApprovalList> {
                                             'Opening Balance',
                                             style: TextStyle (
                                               fontFamily:'Mate',
-                                              fontSize: 10*ffem,
+                                              fontSize: 12*ffem,
                                               fontWeight: FontWeight.w400,
                                               height: 1.7000001272*ffem/fem,
                                               color: Color(0xff282828),
