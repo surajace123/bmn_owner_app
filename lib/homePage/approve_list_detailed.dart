@@ -132,23 +132,19 @@ class _ApproveListDetailedState extends State<ApproveListDetailed> {
                                             children: [
                                               Container(
                                                 // group106gw9 (124:448)
-                                                margin: EdgeInsets.fromLTRB(0.5*fem, 0*fem, 0*fem, 20*fem),
+                                                margin: EdgeInsets.fromLTRB(0.5*fem, 0*fem, 0*fem, 18*fem),
                                                 width: 88*fem,
                                                 child: Column(
                                                   crossAxisAlignment: CrossAxisAlignment.start,
                                                   children: [
-                                                    Container(
-                                                      // billdateMXV (121:219)
-                                                      width: double.infinity,
-                                                      child: Text(
-                                                        'Bill Date',
-                                                        style: TextStyle (
-                                                          fontFamily:'Mate',
-                                                          fontSize: 14*ffem,
-                                                          fontWeight: FontWeight.w400,
-                                                          height: 1.7000000817*ffem/fem,
-                                                          color: Color(0xff282828),
-                                                        ),
+                                                    Text(
+                                                      'Bill Date',
+                                                      style: TextStyle (
+                                                        fontFamily:'Mate',
+                                                        fontSize: 14*ffem,
+                                                        fontWeight: FontWeight.w400,
+                                                        height: 1.7000000817*ffem/fem,
+                                                        color: Color(0xff282828),
                                                       ),
                                                     ),
                                                     Text(
@@ -166,44 +162,36 @@ class _ApproveListDetailedState extends State<ApproveListDetailed> {
                                                   ],
                                                 ),
                                               ),
-                                              Container(
-                                                // group109H3m (124:451)
-                                                width: 52.5*fem,
-                                                child: Column(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: [
-                                                    Container(
-                                                      // amountc63 (121:223)
-                                                      width: double.infinity,
-                                                      child: Text(
-                                                        'Amount',
-                                                        textAlign: TextAlign.center,
-                                                        style: TextStyle (
-                                                          fontFamily:  'Mate',
-                                                          fontSize: 14*ffem,
-                                                          fontWeight: FontWeight.w400,
-                                                          height: 1.7000000817*ffem/fem,
-                                                          color: Color(0xff282828),
-                                                        ),
+                                              Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    'Amount',
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle (
+                                                      fontFamily:  'Mate',
+                                                      fontSize: 14*ffem,
+                                                      fontWeight: FontWeight.w400,
+                                                      height: 1.7000000817*ffem/fem,
+                                                      color: Color(0xff282828),
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    // t3Z (121:214)
+                                                    margin: EdgeInsets.fromLTRB(0.5*fem, 0*fem, 0*fem, 0*fem),
+                                                    child: Text(
+                                                      '₹3,902',
+                                                      style: TextStyle (
+                                                        fontFamily:  'Lato',
+                                                        fontSize: 16*ffem,
+                                                        fontWeight: FontWeight.w500,
+                                                        height: 1.7000000477*ffem/fem,
+                                                        letterSpacing: 0.16*fem,
+                                                        color: Color(0xff282828),
                                                       ),
                                                     ),
-                                                    Container(
-                                                      // t3Z (121:214)
-                                                      margin: EdgeInsets.fromLTRB(0.5*fem, 0*fem, 0*fem, 0*fem),
-                                                      child: Text(
-                                                        '₹3,902',
-                                                        style: TextStyle (
-                                                          fontFamily:  'Lato',
-                                                          fontSize: 16*ffem,
-                                                          fontWeight: FontWeight.w500,
-                                                          height: 1.7000000477*ffem/fem,
-                                                          letterSpacing: 0.16*fem,
-                                                          color: Color(0xff282828),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
+                                                  ),
+                                                ],
                                               ),
                                             ],
                                           ),
@@ -248,40 +236,33 @@ class _ApproveListDetailedState extends State<ApproveListDetailed> {
                                                   ],
                                                 ),
                                               ),
-                                              Container(
-                                                // group110RzX (124:452)
-                                                child: Column(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: [
-                                                    Container(
-                                                      // approvedongvT (121:213)
-                                                      width: double.infinity,
-                                                      child: Text(
-                                                        'Approved On',
-                                                        textAlign: TextAlign.center,
-                                                        style: TextStyle (
-                                                          fontFamily:  'Mate',
-                                                          fontSize: 13.90*ffem,
-                                                          fontWeight: FontWeight.w400,
-                                                          height: 1.7000000817*ffem/fem,
-                                                          color: Color(0xff282828),
-                                                        ),
-                                                      ),
+                                              Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    'Approved On',
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle (
+                                                      fontFamily:  'Mate',
+                                                      fontSize: 13*ffem,
+                                                      fontWeight: FontWeight.w400,
+                                                      height: 1.7000000817*ffem/fem,
+                                                      color: Color(0xff282828),
                                                     ),
-                                                    Text(
-                                                      // QLf (121:220)
-                                                      '₹5,000',
-                                                      style: TextStyle (
-                                                        fontFamily:  'Lato',
-                                                        fontSize: 16*ffem,
-                                                        fontWeight: FontWeight.w500,
-                                                        height: 1.7000000477*ffem/fem,
-                                                        letterSpacing: 0.16*fem,
-                                                        color: Color(0xff282828),
-                                                      ),
+                                                  ),
+                                                  Text(
+                                                    // QLf (121:220)
+                                                    '₹5,000',
+                                                    style: TextStyle (
+                                                      fontFamily:  'Lato',
+                                                      fontSize: 16*ffem,
+                                                      fontWeight: FontWeight.w500,
+                                                      height: 1.7000000477*ffem/fem,
+                                                      letterSpacing: 0.16*fem,
+                                                      color: Color(0xff282828),
                                                     ),
-                                                  ],
-                                                ),
+                                                  ),
+                                                ],
                                               ),
                                             ],
                                           ),
@@ -335,19 +316,15 @@ class _ApproveListDetailedState extends State<ApproveListDetailed> {
                                                 child: Column(
                                                   crossAxisAlignment: CrossAxisAlignment.start,
                                                   children: [
-                                                    Container(
-                                                      // commentsD59 (121:212)
-                                                      width: double.infinity,
-                                                      child: Text(
-                                                        'Comments',
-                                                        textAlign: TextAlign.center,
-                                                        style: TextStyle (
-                                                          fontFamily: 'Mate',
-                                                          fontSize: 14*ffem,
-                                                          fontWeight: FontWeight.w400,
-                                                          height: 1.7000000817*ffem/fem,
-                                                          color: Color(0xff282828),
-                                                        ),
+                                                    Text(
+                                                      'Comments',
+                                                      textAlign: TextAlign.center,
+                                                      style: TextStyle (
+                                                        fontFamily: 'Mate',
+                                                        fontSize: 14*ffem,
+                                                        fontWeight: FontWeight.w400,
+                                                        height: 1.7000000817*ffem/fem,
+                                                        color: Color(0xff282828),
                                                       ),
                                                     ),
                                                     Text(
@@ -372,20 +349,16 @@ class _ApproveListDetailedState extends State<ApproveListDetailed> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.only(right: 250),
-                                    child: Container(
-                                      // commentsAeb (125:455)
-                                      width: double.infinity,
-                                      child: Text(
-                                        'Comments',
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle (
-                                          fontFamily: 'Mate',
-                                          fontSize: 14*ffem,
-                                          fontWeight: FontWeight.w400,
-                                          height: 1.7000000817*ffem/fem,
-                                          color: Color(0xff282828),
-                                        ),
+                                    padding: const EdgeInsets.only(left: 2),
+                                    child: Text(
+                                      'Comments',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle (
+                                        fontFamily: 'Mate',
+                                        fontSize: 14*ffem,
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.7000000817*ffem/fem,
+                                        color: Color(0xff282828),
                                       ),
                                     ),
                                   ),
@@ -448,7 +421,7 @@ class _ApproveListDetailedState extends State<ApproveListDetailed> {
                                       ),
                                       children: [
                                         TextSpan(
-                                          text: '₹',
+                                          text: '₹3,540',
                                           style: TextStyle (
                                             fontFamily:  'Lato',
                                             fontSize: 18*ffem,
@@ -457,9 +430,7 @@ class _ApproveListDetailedState extends State<ApproveListDetailed> {
                                             color: Color(0xff000000),
                                           ),
                                         ),
-                                        TextSpan(
-                                          text: '3,540',
-                                        ),
+
                                       ],
                                     ),
                                   ),
@@ -508,7 +479,7 @@ class _ApproveListDetailedState extends State<ApproveListDetailed> {
                                       ),
                                       children: [
                                         TextSpan(
-                                          text: '₹',
+                                          text: '₹3,214',
                                           style: TextStyle (
                                             fontFamily:  'Lato',
                                             fontSize: 18*ffem,
@@ -516,9 +487,6 @@ class _ApproveListDetailedState extends State<ApproveListDetailed> {
                                             height: 1.8888888889*ffem/fem,
                                             color: Color(0xff000000),
                                           ),
-                                        ),
-                                        TextSpan(
-                                          text: '3,214',
                                         ),
                                       ],
                                     ),
@@ -568,7 +536,7 @@ class _ApproveListDetailedState extends State<ApproveListDetailed> {
                                       ),
                                       children: [
                                         TextSpan(
-                                          text: '₹',
+                                          text: '₹5,000',
                                           style: TextStyle (
                                             fontFamily:  'Lato',
                                             fontSize: 18*ffem,
@@ -576,9 +544,6 @@ class _ApproveListDetailedState extends State<ApproveListDetailed> {
                                             height: 1.8888888889*ffem/fem,
                                             color: Color(0xff000000),
                                           ),
-                                        ),
-                                        TextSpan(
-                                          text: '5,000',
                                         ),
                                       ],
                                     ),
@@ -628,7 +593,7 @@ class _ApproveListDetailedState extends State<ApproveListDetailed> {
                                       ),
                                       children: [
                                         TextSpan(
-                                          text: '₹',
+                                          text: '₹4,674',
                                           style: TextStyle (
                                             fontFamily:  'Lato',
                                             fontSize: 18*ffem,
@@ -636,9 +601,6 @@ class _ApproveListDetailedState extends State<ApproveListDetailed> {
                                             height: 1.8888888889*ffem/fem,
                                             color: Color(0xff000000),
                                           ),
-                                        ),
-                                        TextSpan(
-                                          text: '4,674',
                                         ),
                                       ],
                                     ),

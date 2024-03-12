@@ -128,120 +128,96 @@ class _ApprovedListState extends State<ApprovedList> {
                                     // group46r2K (233:1930)
                                     left: 32*fem,
                                     top: 108*fem,
-                                    child: Container(
-                                      width: 88*fem,
-                                      height: 54*fem,
-                                      child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          Container(
-                                            // approvedonAx7 (233:1931)
-                                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 2*fem),
-                                            child: Text(
-                                              'Approved On',
-                                              style: TextStyle (
-                                                fontFamily: 'Mate',
-                                                fontSize: 14*ffem,
-                                                fontWeight: FontWeight.w400,
-                                                height: 1.7000000817*ffem/fem,
-                                                color: Color(0xff282828),
-                                              ),
-                                            ),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Approved On',
+                                          style: TextStyle (
+                                            fontFamily: 'Mate',
+                                            fontSize: 14*ffem,
+                                            fontWeight: FontWeight.w400,
+                                            height: 1.7000000817*ffem/fem,
+                                            color: Color(0xff282828),
                                           ),
-                                          Text(
-                                            // dao (233:1932)
-                                            '08/01/2024',
-                                            style: TextStyle (
-                                              fontFamily:'Lato',
-                                              fontSize: 16*ffem,
-                                              fontWeight: FontWeight.w500,
-                                              height: 1.7000000477*ffem/fem,
-                                              letterSpacing: 0.16*fem,
-                                              color: Color(0xff282828),
-                                            ),
+                                        ),
+                                        Text(
+                                          // dao (233:1932)
+                                          '08/01/2024',
+                                          style: TextStyle (
+                                            fontFamily:'Lato',
+                                            fontSize: 16*ffem,
+                                            fontWeight: FontWeight.w500,
+                                            height: 1.7000000477*ffem/fem,
+                                            letterSpacing: 0.16*fem,
+                                            color: Color(0xff282828),
                                           ),
-                                        ],
-                                      ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                   Positioned(
                                     // group50gZ5 (233:1934)
                                     left: 267*fem,
                                     top: 22*fem,
-                                    child: Container(
-                                      width: 62*fem,
-                                      height: 50*fem,
-                                      child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          Container(
-                                            // totalitemyo5 (233:1935)
-                                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 1*fem),
-                                            child: Text(
-                                              'Total Item',
-                                              style: TextStyle (
-                                                fontFamily:'Mate',
-                                                fontSize: 12*ffem,
-                                                fontWeight: FontWeight.w400,
-                                                height: 1.7000001272*ffem/fem,
-                                                color: Color(0xff282828),
-                                              ),
-                                            ),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Total Item',
+                                          style: TextStyle (
+                                            fontFamily:'Mate',
+                                            fontSize: 12*ffem,
+                                            fontWeight: FontWeight.w400,
+                                            height: 1.7000001272*ffem/fem,
+                                            color: Color(0xff282828),
                                           ),
-                                          Text(
-                                            // GnB (233:1936)
-                                            '06',
-                                            style: TextStyle (
-                                              fontFamily: 'Lato',
-                                              fontSize: 16*ffem,
-                                              fontWeight: FontWeight.w500,
-                                              height: 1.7000000477*ffem/fem,
-                                              letterSpacing: 0.16*fem,
-                                              color: Color(0xff282828),
-                                            ),
+                                        ),
+                                        Text(
+                                          // GnB (233:1936)
+                                          '06',
+                                          style: TextStyle (
+                                            fontFamily: 'Lato',
+                                            fontSize: 16*ffem,
+                                            fontWeight: FontWeight.w500,
+                                            height: 1.7000000477*ffem/fem,
+                                            letterSpacing: 0.16*fem,
+                                            color: Color(0xff282828),
                                           ),
-                                        ],
-                                      ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                   Positioned(
                                     // group49kBZ (233:1938)
                                     left: 154*fem,
                                     top: 22*fem,
-                                    child: Container(
-                                      width: 73*fem,
-                                      height: 50*fem,
-                                      child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          Container(
-                                            // totalamountEsR (233:1939)
-                                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 1*fem),
-                                            child: Text(
-                                              'Total Amount',
-                                              style: TextStyle (
-                                                fontFamily:'Mate',
-                                                fontSize: 12*ffem,
-                                                fontWeight: FontWeight.w400,
-                                                height: 1.7000001272*ffem/fem,
-                                                color: Color(0xff282828),
-                                              ),
-                                            ),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Total Amount',
+                                          style: TextStyle (
+                                            fontFamily:'Mate',
+                                            fontSize: 12*ffem,
+                                            fontWeight: FontWeight.w400,
+                                            height: 1.7000001272*ffem/fem,
+                                            color: Color(0xff282828),
                                           ),
-                                          Text(
-                                            // L9m (233:1940)
-                                            '₹5,000',
-                                            style: TextStyle (
-                                              fontFamily: 'Lato',
-                                              fontSize: 16*ffem,
-                                              fontWeight: FontWeight.w500,
-                                              height: 1.7000000477*ffem/fem,
-                                              letterSpacing: 0.16*fem,
-                                              color: Color(0xff282828),
-                                            ),
+                                        ),
+                                        Text(
+                                          // L9m (233:1940)
+                                          '₹5,000',
+                                          style: TextStyle (
+                                            fontFamily: 'Lato',
+                                            fontSize: 16*ffem,
+                                            fontWeight: FontWeight.w500,
+                                            height: 1.7000000477*ffem/fem,
+                                            letterSpacing: 0.16*fem,
+                                            color: Color(0xff282828),
                                           ),
-                                        ],
-                                      ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                   Positioned(
@@ -254,20 +230,15 @@ class _ApprovedListState extends State<ApprovedList> {
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
-                                          Container(
-                                            // openingbalancedo5 (233:1943)
-                                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 1*fem),
-                                            width: double.infinity,
-                                            child: Text(
-                                              'Opening Balance',
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle (
-                                                fontFamily: 'Mate',
-                                                fontSize: 12*ffem,
-                                                fontWeight: FontWeight.w400,
-                                                height: 1.7000001272*ffem/fem,
-                                                color: Color(0xff282828),
-                                              ),
+                                          Text(
+                                            'Opening Balance',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle (
+                                              fontFamily: 'Mate',
+                                              fontSize: 12*ffem,
+                                              fontWeight: FontWeight.w400,
+                                              height: 1.7000001272*ffem/fem,
+                                              color: Color(0xff282828),
                                             ),
                                           ),
                                           Padding(

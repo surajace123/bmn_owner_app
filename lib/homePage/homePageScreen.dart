@@ -316,30 +316,23 @@ class _HomePageState extends State<HomePage> {
                             decoration: BoxDecoration (
                               borderRadius: BorderRadius.circular(8*fem),
                             ),
-                            child: Container(
-                              // group91Yqd (89:4593)
-                              width: double.infinity,
-                              height: double.infinity,
-                              decoration: BoxDecoration (
-                                borderRadius: BorderRadius.circular(8*fem),
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text("Most Spend Category",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w400,fontFamily: 'Mate'),),
-
-                                      Container(
-                                        height: MediaQuery.of(context).size.height / 25,
-                                        width: MediaQuery.of(context).size.width/3.8,
-                                        decoration: BoxDecoration(
-                                          border: Border.all(color: Color.fromRGBO(252, 209, 37, 1), width: 2.0),
-                                          borderRadius: BorderRadius.circular(25.0),
-                                        ),
-                                        child: Padding(
-                                          padding: const EdgeInsets.only(right: 0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                  children: [
+                                    Text("Most Spend Category",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w400,fontFamily: 'Mate'),),
+                            SizedBox(width: 40,),
+                                    Container(
+                                      height: MediaQuery.of(context).size.height / 31,
+                                      width: MediaQuery.of(context).size.width / 4,
+                                      decoration: BoxDecoration(
+                                        border: Border.all(color: Color.fromRGBO(252, 209, 37, 1), width: 2.0),
+                                        borderRadius: BorderRadius.circular(25.0),
+                                      ),
+                                      child: DropdownButtonHideUnderline(
+                                        child: Center(
                                           child: DropdownButton<String>(
                                             value: selectedValue,
                                             onChanged: (String? newValue) {
@@ -352,386 +345,434 @@ class _HomePageState extends State<HomePage> {
                                               return DropdownMenuItem<String>(
                                                 value: value,
                                                 child: Padding(
-                                                  padding: const EdgeInsets.only(right: 1,left: 6),
-                                                  child: Text(
-                                                    value,
-                                                    style: TextStyle(color: Color.fromRGBO(252, 209, 37, 1),fontSize: 11,fontWeight: FontWeight.w600,fontFamily: 'Mate'), // Set text color to yellow
+                                                  padding: const EdgeInsets.only(right: 1, left: 2),
+                                                  child: Row(
+                                                    children: [
+                                                      Padding(
+                                                        padding: const EdgeInsets.only(left: 2),
+                                                        child: Center(
+                                                          child: Text(
+                                                            value,
+                                                            style: TextStyle(
+                                                              color: Color.fromRGBO(252, 209, 37, 1),
+                                                              fontSize: 11,
+                                                              fontWeight: FontWeight.w600,
+                                                              fontFamily: 'Mate',
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+
+                                                    ],
                                                   ),
                                                 ),
                                               );
                                             }).toList(),
                                             underline: Container(), // Remove the default underline
+                                            icon: null, // Make the default icon invisible
                                           ),
                                         ),
-                                      )
-                                    ],
-                                  ),
-                                  // Row(
-                                  //
-                                  //   children: [
-                                  //     Padding(
-                                  //       padding: const EdgeInsets.symmetric(horizontal: 4),
-                                  //       child: Text("Most Spend Category",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w400,fontFamily: 'Mate'),),
-                                  //     ),
-                                  //     SizedBox(width:30,),
-                                  //     Container(
-                                  //       height: MediaQuery.of(context).size.height / 25,
-                                  //       width: MediaQuery.of(context).size.width/3.8,
-                                  //       decoration: BoxDecoration(
-                                  //         border: Border.all(color: Color.fromRGBO(252, 209, 37, 1), width: 2.0),
-                                  //         borderRadius: BorderRadius.circular(25.0),
-                                  //       ),
-                                  //       child: Padding(
-                                  //         padding: const EdgeInsets.only(right: 0),
-                                  //         child: DropdownButton<String>(
-                                  //           value: selectedValue,
-                                  //           onChanged: (String? newValue) {
-                                  //             setState(() {
-                                  //               selectedValue = newValue!;
-                                  //             });
-                                  //           },
-                                  //           items: <String>['Today', 'Yesterday', 'This Week', 'This Month']
-                                  //               .map((String value) {
-                                  //             return DropdownMenuItem<String>(
-                                  //               value: value,
-                                  //               child: Padding(
-                                  //                 padding: const EdgeInsets.only(right: 1,left: 6),
-                                  //                 child: Text(
-                                  //                   value,
-                                  //                   style: TextStyle(color: Color.fromRGBO(252, 209, 37, 1),fontSize: 11,fontWeight: FontWeight.w600,fontFamily: 'Mate'), // Set text color to yellow
-                                  //                 ),
-                                  //               ),
-                                  //             );
-                                  //           }).toList(),
-                                  //           underline: Container(), // Remove the default underline
-                                  //         ),
-                                  //       ),
-                                  //     )
-                                  //   ],
-                                  // ),
-                                  SizedBox(height: 20,),
-          
-                                  Expanded(
-                                    child: Container(
-                                      // group56XSf (89:4576)
-
-                                      decoration: BoxDecoration (
-                                        borderRadius: BorderRadius.circular(8*fem),
                                       ),
-                                      child: SingleChildScrollView(
-                                        child: Column(
-                                          crossAxisAlignment: CrossAxisAlignment.center,
-                                          children: [
-                                            Container(
-                                              // autogroupyxguNTH (63iiJ2SxVta5MrVoBFyxGu)
-                                              padding: EdgeInsets.fromLTRB(25*fem, 13*fem, 29.5*fem, 11*fem),
-                                              width: double.infinity,
-                                              decoration: BoxDecoration (
-                                                border: Border.all(color: Color(0xfffbd124)),
-                                                color: Color(0x0cfbd124),
-                                                borderRadius: BorderRadius.circular(8*fem),
-                                              ),
-                                              child: Row(
-                                                crossAxisAlignment: CrossAxisAlignment.center,
-                                                children: [
-                                                  Container(
-                                                    // teaSi3 (89:4582)
-                                                    margin: EdgeInsets.fromLTRB(0*fem, 2*fem, 269.5*fem, 0*fem),
-                                                    child: Text(
-                                                      'Tea',
+                                    )
+
+
+                                    // Container(
+                                    //   height: MediaQuery.of(context).size.height / 25,
+                                    //   width: MediaQuery.of(context).size.width/4.1,
+                                    //   decoration: BoxDecoration(
+                                    //     border: Border.all(color: Color.fromRGBO(252, 209, 37, 1), width: 2.0),
+                                    //     borderRadius: BorderRadius.circular(25.0),
+                                    //   ),
+                                    //   child: DropdownButton<String>(
+                                    //     value: selectedValue,
+                                    //     onChanged: (String? newValue) {
+                                    //       setState(() {
+                                    //         selectedValue = newValue!;
+                                    //       });
+                                    //     },
+                                    //     items: <String>['Today', 'Yesterday', 'This Week', 'This Month']
+                                    //         .map((String value) {
+                                    //       return DropdownMenuItem<String>(
+                                    //         value: value,
+                                    //         child: Padding(
+                                    //           padding: const EdgeInsets.only(right: 3,left: 8),
+                                    //           child: Text(
+                                    //             value,
+                                    //             style: TextStyle(color: Color.fromRGBO(252, 209, 37, 1),fontSize: 11,fontWeight: FontWeight.w600,fontFamily: 'Mate'), // Set text color to yellow
+                                    //           ),
+                                    //         ),
+                                    //       );
+                                    //     }).toList(),
+                                    //     underline: Container(), // Remove the default underline
+                                    //   ),
+                                    // )
+                                  ],
+                                ),
+                                // Row(
+                                //
+                                //   children: [
+                                //     Padding(
+                                //       padding: const EdgeInsets.symmetric(horizontal: 4),
+                                //       child: Text("Most Spend Category",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w400,fontFamily: 'Mate'),),
+                                //     ),
+                                //     SizedBox(width:30,),
+                                //     Container(
+                                //       height: MediaQuery.of(context).size.height / 25,
+                                //       width: MediaQuery.of(context).size.width/3.8,
+                                //       decoration: BoxDecoration(
+                                //         border: Border.all(color: Color.fromRGBO(252, 209, 37, 1), width: 2.0),
+                                //         borderRadius: BorderRadius.circular(25.0),
+                                //       ),
+                                //       child: Padding(
+                                //         padding: const EdgeInsets.only(right: 0),
+                                //         child: DropdownButton<String>(
+                                //           value: selectedValue,
+                                //           onChanged: (String? newValue) {
+                                //             setState(() {
+                                //               selectedValue = newValue!;
+                                //             });
+                                //           },
+                                //           items: <String>['Today', 'Yesterday', 'This Week', 'This Month']
+                                //               .map((String value) {
+                                //             return DropdownMenuItem<String>(
+                                //               value: value,
+                                //               child: Padding(
+                                //                 padding: const EdgeInsets.only(right: 1,left: 6),
+                                //                 child: Text(
+                                //                   value,
+                                //                   style: TextStyle(color: Color.fromRGBO(252, 209, 37, 1),fontSize: 11,fontWeight: FontWeight.w600,fontFamily: 'Mate'), // Set text color to yellow
+                                //                 ),
+                                //               ),
+                                //             );
+                                //           }).toList(),
+                                //           underline: Container(), // Remove the default underline
+                                //         ),
+                                //       ),
+                                //     )
+                                //   ],
+                                // ),
+                                SizedBox(height: 18,),
+
+                                Expanded(
+                                  child: Container(
+                                    // group56XSf (89:4576)
+
+                                    decoration: BoxDecoration (
+                                      borderRadius: BorderRadius.circular(8*fem),
+                                    ),
+                                    child: SingleChildScrollView(
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            // autogroupyxguNTH (63iiJ2SxVta5MrVoBFyxGu)
+                                            padding: EdgeInsets.fromLTRB(25*fem, 13*fem, 29.5*fem, 11*fem),
+                                            width: double.infinity,
+                                            decoration: BoxDecoration (
+                                              border: Border.all(color: Color(0xfffbd124)),
+                                              color: Color(0x0cfbd124),
+                                              borderRadius: BorderRadius.circular(8*fem),
+                                            ),
+                                            child: Row(
+                                              crossAxisAlignment: CrossAxisAlignment.center,
+                                              children: [
+                                                Container(
+                                                  // teaSi3 (89:4582)
+                                                  margin: EdgeInsets.fromLTRB(0*fem, 2*fem, 269.5*fem, 0*fem),
+                                                  child: Text(
+                                                    'Tea',
+                                                    style: TextStyle (
+                                                      fontFamily:'Mate',
+                                                      fontSize: 16*ffem,
+                                                      fontWeight: FontWeight.w400,
+                                                      height: 1.7000000477*ffem/fem,
+                                                      color: Color(0xff282828),
+                                                    ),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  // urX (89:4587)
+                                                  margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 2*fem),
+                                                  child: RichText(
+                                                    textAlign: TextAlign.center,
+                                                    text: TextSpan(
                                                       style: TextStyle (
-                                                        fontFamily:'Mate',
+                                                        fontFamily:'Lato',
+                                                        fontSize: 14*ffem,
+                                                        fontWeight: FontWeight.w400,
+                                                        height: 1.7000000477*ffem/fem,
+                                                        color: Color(0xff282828),
+                                                      ),
+                                                      children: [
+
+                                                        TextSpan(
+                                                          text: '₹5,000',
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 16*fem,
+                                          ),
+                                          Container(
+                                            // autogroupagcuVCT (63iiRGjtBp6TymjgVbagCu)
+                                            padding: EdgeInsets.fromLTRB(22*fem, 13*fem, 29.5*fem, 11*fem),
+                                            width: double.infinity,
+                                            decoration: BoxDecoration (
+                                              border: Border.all(color: Color(0xfffbd124)),
+                                              color: Color(0x0cfbd124),
+                                              borderRadius: BorderRadius.circular(8*fem),
+                                            ),
+                                            child: Row(
+                                              crossAxisAlignment: CrossAxisAlignment.center,
+                                              children: [
+                                                Container(
+                                                  // poojaitemxbq (89:4583)
+                                                  margin: EdgeInsets.fromLTRB(0*fem, 2*fem, 222.5*fem, 0*fem),
+                                                  child: Text(
+                                                    'Pooja Item',
+                                                    style: TextStyle (
+                                                      fontFamily:'Mate',
+                                                      fontSize: 16*ffem,
+                                                      fontWeight: FontWeight.w400,
+                                                      height: 1.7000000477*ffem/fem,
+                                                      color: Color(0xff282828),
+                                                    ),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  // BzP (89:4588)
+                                                  margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 2*fem),
+                                                  child: RichText(
+                                                    textAlign: TextAlign.center,
+                                                    text: TextSpan(
+                                                      style: TextStyle (
+                                                        fontFamily: 'Lato',
                                                         fontSize: 16*ffem,
                                                         fontWeight: FontWeight.w400,
                                                         height: 1.7000000477*ffem/fem,
                                                         color: Color(0xff282828),
                                                       ),
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    // urX (89:4587)
-                                                    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 2*fem),
-                                                    child: RichText(
-                                                      textAlign: TextAlign.center,
-                                                      text: TextSpan(
-                                                        style: TextStyle (
-                                                          fontFamily:'Lato',
-                                                          fontSize: 14*ffem,
-                                                          fontWeight: FontWeight.w400,
-                                                          height: 1.7000000477*ffem/fem,
-                                                          color: Color(0xff282828),
-                                                        ),
-                                                        children: [
-                                    
-                                                          TextSpan(
-                                                            text: '₹5,000',
+                                                      children: [
+                                                        TextSpan(
+                                                          text: '₹',
+                                                          style: TextStyle (
+                                                            fontFamily: 'Lato',
+                                                            fontSize: 12*ffem,
+                                                            fontWeight: FontWeight.w400,
+                                                            height: 1.9428571974*ffem/fem,
+                                                            color: Color(0xff282828),
                                                           ),
-                                                        ],
-                                                      ),
+                                                        ),
+                                                        TextSpan(
+                                                          text: '2,000',
+                                                        ),
+                                                      ],
                                                     ),
                                                   ),
-                                                ],
-                                              ),
+                                                ),
+                                              ],
                                             ),
-                                            SizedBox(
-                                              height: 16*fem,
+                                          ),
+                                          SizedBox(
+                                            height: 16*fem,
+                                          ),
+                                          Container(
+                                            // autogroup9ookqBm (63iiXmZ4Kc5iFyU8W39ooK)
+                                            padding: EdgeInsets.fromLTRB(22*fem, 13*fem, 29.5*fem, 11*fem),
+                                            width: double.infinity,
+                                            decoration: BoxDecoration (
+                                              border: Border.all(color: Color(0xfffbd124)),
+                                              color: Color(0x0cfbd124),
+                                              borderRadius: BorderRadius.circular(8*fem),
                                             ),
-                                            Container(
-                                              // autogroupagcuVCT (63iiRGjtBp6TymjgVbagCu)
-                                              padding: EdgeInsets.fromLTRB(22*fem, 13*fem, 29.5*fem, 11*fem),
-                                              width: double.infinity,
-                                              decoration: BoxDecoration (
-                                                border: Border.all(color: Color(0xfffbd124)),
-                                                color: Color(0x0cfbd124),
-                                                borderRadius: BorderRadius.circular(8*fem),
-                                              ),
-                                              child: Row(
-                                                crossAxisAlignment: CrossAxisAlignment.center,
-                                                children: [
-                                                  Container(
-                                                    // poojaitemxbq (89:4583)
-                                                    margin: EdgeInsets.fromLTRB(0*fem, 2*fem, 222.5*fem, 0*fem),
-                                                    child: Text(
-                                                      'Pooja Item',
+                                            child: Row(
+                                              crossAxisAlignment: CrossAxisAlignment.center,
+                                              children: [
+                                                Container(
+                                                  // harpichUs (89:4584)
+                                                  margin: EdgeInsets.fromLTRB(0*fem, 2*fem, 248.5*fem, 0*fem),
+                                                  child: Text(
+                                                    'Harpic',
+                                                    style: TextStyle (
+                                                      fontFamily: 'Mate',
+                                                      fontSize: 16*ffem,
+                                                      fontWeight: FontWeight.w400,
+                                                      height: 1.7000000477*ffem/fem,
+                                                      color: Color(0xff282828),
+                                                    ),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  // 8aB (89:4589)
+                                                  margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 2*fem),
+                                                  child: RichText(
+                                                    textAlign: TextAlign.center,
+                                                    text: TextSpan(
                                                       style: TextStyle (
-                                                        fontFamily:'Mate',
+                                                        fontFamily:'Lato',
                                                         fontSize: 16*ffem,
                                                         fontWeight: FontWeight.w400,
                                                         height: 1.7000000477*ffem/fem,
                                                         color: Color(0xff282828),
                                                       ),
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    // BzP (89:4588)
-                                                    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 2*fem),
-                                                    child: RichText(
-                                                      textAlign: TextAlign.center,
-                                                      text: TextSpan(
-                                                        style: TextStyle (
-                                                          fontFamily: 'Lato',
-                                                          fontSize: 16*ffem,
-                                                          fontWeight: FontWeight.w400,
-                                                          height: 1.7000000477*ffem/fem,
-                                                          color: Color(0xff282828),
+                                                      children: [
+                                                        TextSpan(
+                                                          text: '₹',
+                                                          style: TextStyle (
+                                                            fontFamily: 'Lato',
+                                                            fontSize: 14*ffem,
+                                                            fontWeight: FontWeight.w400,
+                                                            height: 1.9428571974*ffem/fem,
+                                                            color: Color(0xff282828),
+                                                          ),
                                                         ),
-                                                        children: [
-                                                          TextSpan(
-                                                            text: '₹',
-                                                            style: TextStyle (
-                                                              fontFamily: 'Lato',
-                                                              fontSize: 12*ffem,
-                                                              fontWeight: FontWeight.w400,
-                                                              height: 1.9428571974*ffem/fem,
-                                                              color: Color(0xff282828),
-                                                            ),
-                                                          ),
-                                                          TextSpan(
-                                                            text: '2,000',
-                                                          ),
-                                                        ],
-                                                      ),
+                                                        TextSpan(
+                                                          text: '1,100',
+                                                        ),
+                                                      ],
                                                     ),
                                                   ),
-                                                ],
-                                              ),
+                                                ),
+                                              ],
                                             ),
-                                            SizedBox(
-                                              height: 16*fem,
+                                          ),
+                                          SizedBox(
+                                            height: 16*fem,
+                                          ),
+                                          Container(
+                                            // autogroupnyw1JmV (63iidmP4keNryhXcyDNYW1)
+                                            padding: EdgeInsets.fromLTRB(22*fem, 13*fem, 29.5*fem, 11*fem),
+                                            width: double.infinity,
+                                            decoration: BoxDecoration (
+                                              border: Border.all(color: Color(0xfffbd124)),
+                                              color: Color(0x0cfbd124),
+                                              borderRadius: BorderRadius.circular(8*fem),
                                             ),
-                                            Container(
-                                              // autogroup9ookqBm (63iiXmZ4Kc5iFyU8W39ooK)
-                                              padding: EdgeInsets.fromLTRB(22*fem, 13*fem, 29.5*fem, 11*fem),
-                                              width: double.infinity,
-                                              decoration: BoxDecoration (
-                                                border: Border.all(color: Color(0xfffbd124)),
-                                                color: Color(0x0cfbd124),
-                                                borderRadius: BorderRadius.circular(8*fem),
-                                              ),
-                                              child: Row(
-                                                crossAxisAlignment: CrossAxisAlignment.center,
-                                                children: [
-                                                  Container(
-                                                    // harpichUs (89:4584)
-                                                    margin: EdgeInsets.fromLTRB(0*fem, 2*fem, 248.5*fem, 0*fem),
-                                                    child: Text(
-                                                      'Harpic',
+                                            child: Row(
+                                              crossAxisAlignment: CrossAxisAlignment.center,
+                                              children: [
+                                                Container(
+                                                  // flowerBKV (89:4585)
+                                                  margin: EdgeInsets.fromLTRB(0*fem, 2*fem, 250.5*fem, 0*fem),
+                                                  child: Text(
+                                                    'Flower',
+                                                    style: TextStyle (
+                                                      fontFamily: 'Mate',
+                                                      fontSize: 16*ffem,
+                                                      fontWeight: FontWeight.w400,
+                                                      height: 1.7000000477*ffem/fem,
+                                                      color: Color(0xff282828),
+                                                    ),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  // H7d (89:4590)
+                                                  margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 2*fem),
+                                                  child: RichText(
+                                                    textAlign: TextAlign.center,
+                                                    text: TextSpan(
                                                       style: TextStyle (
-                                                        fontFamily: 'Mate',
+                                                        fontFamily:'Lato',
                                                         fontSize: 16*ffem,
                                                         fontWeight: FontWeight.w400,
                                                         height: 1.7000000477*ffem/fem,
                                                         color: Color(0xff282828),
                                                       ),
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    // 8aB (89:4589)
-                                                    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 2*fem),
-                                                    child: RichText(
-                                                      textAlign: TextAlign.center,
-                                                      text: TextSpan(
-                                                        style: TextStyle (
-                                                          fontFamily:'Lato',
-                                                          fontSize: 16*ffem,
-                                                          fontWeight: FontWeight.w400,
-                                                          height: 1.7000000477*ffem/fem,
-                                                          color: Color(0xff282828),
+                                                      children: [
+                                                        TextSpan(
+                                                          text: '₹',
+                                                          style: TextStyle (
+                                                            fontFamily:'Lato',
+                                                            fontSize: 14*ffem,
+                                                            fontWeight: FontWeight.w400,
+                                                            height: 1.9428571974*ffem/fem,
+                                                            color: Color(0xff282828),
+                                                          ),
                                                         ),
-                                                        children: [
-                                                          TextSpan(
-                                                            text: '₹',
-                                                            style: TextStyle (
-                                                              fontFamily: 'Lato',
-                                                              fontSize: 14*ffem,
-                                                              fontWeight: FontWeight.w400,
-                                                              height: 1.9428571974*ffem/fem,
-                                                              color: Color(0xff282828),
-                                                            ),
-                                                          ),
-                                                          TextSpan(
-                                                            text: '1,100',
-                                                          ),
-                                                        ],
-                                                      ),
+                                                        TextSpan(
+                                                          text: '6,100',
+                                                        ),
+                                                      ],
                                                     ),
                                                   ),
-                                                ],
-                                              ),
+                                                ),
+                                              ],
                                             ),
-                                            SizedBox(
-                                              height: 16*fem,
+                                          ),
+                                          SizedBox(
+                                            height: 16*fem,
+                                          ),
+                                          Container(
+                                            // autogroupbhchjNw (63iijmD5Bgg1hRb7SPbHCh)
+                                            padding: EdgeInsets.fromLTRB(22*fem, 13*fem, 29.5*fem, 11*fem),
+                                            width: double.infinity,
+                                            decoration: BoxDecoration (
+                                              border: Border.all(color: Color(0xfffbd124)),
+                                              color: Color(0x0cfbd124),
+                                              borderRadius: BorderRadius.circular(8*fem),
                                             ),
-                                            Container(
-                                              // autogroupnyw1JmV (63iidmP4keNryhXcyDNYW1)
-                                              padding: EdgeInsets.fromLTRB(22*fem, 13*fem, 29.5*fem, 11*fem),
-                                              width: double.infinity,
-                                              decoration: BoxDecoration (
-                                                border: Border.all(color: Color(0xfffbd124)),
-                                                color: Color(0x0cfbd124),
-                                                borderRadius: BorderRadius.circular(8*fem),
-                                              ),
-                                              child: Row(
-                                                crossAxisAlignment: CrossAxisAlignment.center,
-                                                children: [
-                                                  Container(
-                                                    // flowerBKV (89:4585)
-                                                    margin: EdgeInsets.fromLTRB(0*fem, 2*fem, 250.5*fem, 0*fem),
-                                                    child: Text(
-                                                      'Flower',
+                                            child: Row(
+                                              crossAxisAlignment: CrossAxisAlignment.center,
+                                              children: [
+                                                Container(
+                                                  // water9xT (89:4586)
+                                                  margin: EdgeInsets.fromLTRB(0*fem, 2*fem, 256.5*fem, 0*fem),
+                                                  child: Text(
+                                                    'Water',
+                                                    style: TextStyle (
+                                                      fontFamily:'Mate',
+                                                      fontSize: 16*ffem,
+                                                      fontWeight: FontWeight.w400,
+                                                      height: 1.7000000477*ffem/fem,
+                                                      color: Color(0xff282828),
+                                                    ),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  // FVh (89:4591)
+                                                  margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 2*fem),
+                                                  child: RichText(
+                                                    textAlign: TextAlign.center,
+                                                    text: TextSpan(
                                                       style: TextStyle (
-                                                        fontFamily: 'Mate',
+                                                        fontFamily: 'Lato',
                                                         fontSize: 16*ffem,
                                                         fontWeight: FontWeight.w400,
                                                         height: 1.7000000477*ffem/fem,
                                                         color: Color(0xff282828),
                                                       ),
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    // H7d (89:4590)
-                                                    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 2*fem),
-                                                    child: RichText(
-                                                      textAlign: TextAlign.center,
-                                                      text: TextSpan(
-                                                        style: TextStyle (
-                                                          fontFamily:'Lato',
-                                                          fontSize: 16*ffem,
-                                                          fontWeight: FontWeight.w400,
-                                                          height: 1.7000000477*ffem/fem,
-                                                          color: Color(0xff282828),
+                                                      children: [
+                                                        TextSpan(
+                                                          text: '₹',
+                                                          style: TextStyle (
+                                                            fontFamily: 'Lato',
+                                                            fontSize: 14*ffem,
+                                                            fontWeight: FontWeight.w400,
+                                                            height: 1.9428571974*ffem/fem,
+                                                            color: Color(0xff282828),
+                                                          ),
                                                         ),
-                                                        children: [
-                                                          TextSpan(
-                                                            text: '₹',
-                                                            style: TextStyle (
-                                                              fontFamily:'Lato',
-                                                              fontSize: 14*ffem,
-                                                              fontWeight: FontWeight.w400,
-                                                              height: 1.9428571974*ffem/fem,
-                                                              color: Color(0xff282828),
-                                                            ),
-                                                          ),
-                                                          TextSpan(
-                                                            text: '6,100',
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              height: 16*fem,
-                                            ),
-                                            Container(
-                                              // autogroupbhchjNw (63iijmD5Bgg1hRb7SPbHCh)
-                                              padding: EdgeInsets.fromLTRB(22*fem, 13*fem, 29.5*fem, 11*fem),
-                                              width: double.infinity,
-                                              decoration: BoxDecoration (
-                                                border: Border.all(color: Color(0xfffbd124)),
-                                                color: Color(0x0cfbd124),
-                                                borderRadius: BorderRadius.circular(8*fem),
-                                              ),
-                                              child: Row(
-                                                crossAxisAlignment: CrossAxisAlignment.center,
-                                                children: [
-                                                  Container(
-                                                    // water9xT (89:4586)
-                                                    margin: EdgeInsets.fromLTRB(0*fem, 2*fem, 256.5*fem, 0*fem),
-                                                    child: Text(
-                                                      'Water',
-                                                      style: TextStyle (
-                                                        fontFamily:'Mate',
-                                                        fontSize: 16*ffem,
-                                                        fontWeight: FontWeight.w400,
-                                                        height: 1.7000000477*ffem/fem,
-                                                        color: Color(0xff282828),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    // FVh (89:4591)
-                                                    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 2*fem),
-                                                    child: RichText(
-                                                      textAlign: TextAlign.center,
-                                                      text: TextSpan(
-                                                        style: TextStyle (
-                                                          fontFamily: 'Lato',
-                                                          fontSize: 16*ffem,
-                                                          fontWeight: FontWeight.w400,
-                                                          height: 1.7000000477*ffem/fem,
-                                                          color: Color(0xff282828),
+                                                        TextSpan(
+                                                          text: '2,900',
                                                         ),
-                                                        children: [
-                                                          TextSpan(
-                                                            text: '₹',
-                                                            style: TextStyle (
-                                                              fontFamily: 'Lato',
-                                                              fontSize: 14*ffem,
-                                                              fontWeight: FontWeight.w400,
-                                                              height: 1.9428571974*ffem/fem,
-                                                              color: Color(0xff282828),
-                                                            ),
-                                                          ),
-                                                          TextSpan(
-                                                            text: '2,900',
-                                                          ),
-                                                        ],
-                                                      ),
+                                                      ],
                                                     ),
                                                   ),
-                                                ],
-                                              ),
+                                                ),
+                                              ],
                                             ),
-                                          ],
-                                        ),
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
                         ],
